@@ -55,20 +55,5 @@
 				</li>
 			</ul>
 		</aside>
-		<!-- Text Area -->
-		<aside class="widget widget_text">
-			<div class="textwidget">
-				<div style="border: 3px solid #ff0000; padding: 30px 20px 15px; text-align: center;">
-					<h3 style="margin-bottom: 25px;">SIGN UP FOR
-						<br>
-						NEWSLETTER</h3>
-					<p style="margin-bottom: 25px;">
-						Aenean ligula nibh, mole stie id viverra a, dapibus ante lobortis
-					</p>
-					<a class="button button_theme button_js" href="#"><span class="button_label">Subscribe</span></a>
-				</div>
-			</div>
-		</aside>
-		<!-- Recent Comments Area -->
 	</div>
 </div>

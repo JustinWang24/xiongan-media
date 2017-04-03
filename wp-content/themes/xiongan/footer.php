@@ -56,18 +56,7 @@
 					<h4>最热评论</h4>
 					<div class="Recent_comments">
 						<ul>
-							<li>
-								<span class="date_label"></span>
-								<p>
-									<i class="icon-user"></i><strong>admin</strong> commented on <a href="content/press/item-1.html#comment-6" title="admin | Aenean ligula mol stie viverra">Aenean ligula mol stie viverra</a>
-								</p>
-							</li>
-							<li>
-								<span class="date_label">November 17, 2015</span>
-								<p>
-									<i class="icon-user"></i><strong>admin</strong> commented on <a href="content/press/item-1.html#comment-5" title="admin | Aenean ligula mol stie viverra">Aenean ligula mol stie viverra</a>
-								</p>
-							</li>
+
 						</ul>
 					</div>
 				</aside>
@@ -78,24 +67,7 @@
 					<h4>最新热点</h4>
 					<div class="Recent_posts">
 						<ul>
-							<li class="post  format-standard has-post-thumbnail ">
-								<a href="content/press/item-1.html">
-									<div class="photo"><img width="80" height="80" src="content/press/images/home_press_blog_1-80x80.jpg" class="scale-with-grid wp-post-image" alt="home_press_blog_1" />
-									</div>
-									<div class="desc">
-										<h6>Aenean ligula mol stie viverra</h6><span class="date"><i class="icon-clock"></i>May 12, 2015</span>
-									</div>
-								</a>
-							</li>
-							<li class="post  format-standard has-post-thumbnail ">
-								<a href="content/press/item-2.html">
-									<div class="photo"><img width="80" height="80" src="content/press/images/home_press_blog_2-80x80.jpg" class="scale-with-grid wp-post-image" alt="home_press_blog_2" />
-									</div>
-									<div class="desc">
-										<h6>Vitae adipiscing turpis aenean</h6><span class="date"><i class="icon-clock"></i>May 11, 2015</span>
-									</div>
-								</a>
-							</li>
+
 						</ul>
 					</div>
 				</aside>
@@ -105,9 +77,6 @@
 				<aside id="meta-2" class="widget widget_meta">
 					<h4>快速通道</h4>
 					<ul>
-						<li>
-							<a href="#">Log in</a>
-						</li>
 						<li>
 							<a href="#">Entries <abbr title="Really Simple Syndication">RSS</abbr></a>
 						</li>

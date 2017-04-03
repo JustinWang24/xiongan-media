@@ -22,7 +22,7 @@ $data = get_fields();
                                     <?php
                                         $frontpageCategory = get_category_by_slug( 'frontpage_story' );
                                         $args = array(
-                                            'posts_per_page'   => 1,
+                                            'posts_per_page'   => 3,
                                             'offset'           => 0,
                                             'category'         => $frontpageCategory->cat_ID,
                                             'category_name'    => '',

@@ -39,20 +39,25 @@
 		</aside>
 		<!-- Categories Area -->
 		<aside class="widget widget_categories">
-			<h3>往期热点文章</h3>
+			<h3>段子手</h3>
 			<ul>
-				<li class="cat-item cat-item-2">
-					<a href="content/press/lifestyle.html">新闻</a>
-				</li>
-				<li class="cat-item cat-item-5">
-					<a href="content/press/news.html">News</a>
-				</li>
-				<li class="cat-item cat-item-8">
-					<a href="content/press/sport.html">Sport</a>
-				</li>
-				<li class="cat-item cat-item-9">
-					<a href="content/press/technology.html">Technology</a>
-				</li>
+				<?php
+				$newsCategory = get_category_by_slug( 'jokes' );
+				$args = array(
+					'posts_per_page'   => 3,
+					'offset'           => 0,
+					'category'         => $newsCategory->cat_ID
+				);
+				$newsArray = get_posts( $args );
+				foreach ($newsArray as $_post) {
+					?>
+					<li class="cat-item cat-item-2">
+						<?php echo $_post->post_content; ?>
+					</li>
+					<?php
+				}
+
+				?>
 			</ul>
 		</aside>
 	</div>

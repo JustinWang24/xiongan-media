@@ -19,7 +19,7 @@
 		<div class="container">
 			<!-- One full width row-->
 			<div class="column one column_column">
-				<span>Vestibulum commodo <span class="themecolor">volutpat</span> convallis ac laoreet turpis faucibus</span>
+				<span>据不可靠消息，雄安新区将承接北京科技发展功能。房屋按新加坡模式，85%公租。以留住人才。大家洗洗睡吧</span>
 			</div>
 		</div>
 	</div>

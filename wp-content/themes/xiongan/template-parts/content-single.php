@@ -64,7 +64,7 @@
 						<div class="the_content_wrapper">
 							<div class="column one single-photo-wrapper">
 
-								<div class="image_frame scale-with-grid" style="margin: 10px;">
+								<div class="image_frame" style="margin: 10px;">
 									<div class="image_wrapper">
 										<?php the_post_thumbnail(); ?>
 									</div>

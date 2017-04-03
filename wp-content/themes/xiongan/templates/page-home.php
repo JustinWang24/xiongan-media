@@ -60,7 +60,7 @@ $data = get_fields();
                                                                     </span><span class="date"><span> 发表 </span><i class="icon-clock"></i> <?php echo substr($newsPost->post_date,0,11); ?></span>
                                                             </div>
                                                             <div class="category">
-                                                                <span class="cat-btn">Categories <i class="icon-down-dir"></i></span>
+                                                                <span class="cat-btn">目录标签 <i class="icon-down-dir"></i></span>
                                                                 <div class="cat-wrapper">
                                                                     <ul class="post-categories">
                                                                         <li>

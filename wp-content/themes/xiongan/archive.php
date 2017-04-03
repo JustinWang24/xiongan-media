@@ -18,48 +18,78 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div class="sections_group">
+	<div class="extra_content">
 
-		<?php if ( have_posts() ) : ?>
+	</div>
+	<div class="section">
+		<div class="section_wrapper clearfix">
+			<!--  Filter Area -->
+			<!-- One full width row-->
+			<div class="column one column_blog">
+				<div class="blog_wrapper isotope_wrapper">
+					<div class="posts_group lm_wrapper classic">
+						<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+							<?php
+							// Start the Loop.
+							while ( have_posts() ) : the_post();
 
-			<?php
-			// Start the Loop.
-			while ( have_posts() ) : the_post();
+								?>
+								<div class="post  format-standard has-post-thumbnail     post-item isotope-item clearfix">
+									<div class="image_frame post-photo-wrapper scale-with-grid">
+										<div class="image_wrapper">
+											<a href="<?php the_permalink(); ?>">
+												<div class="mask"></div><img width="576" height="450" src="<?php the_post_thumbnail_url( add_image_size( 'custom-size', 576, 450 ) ); ?>" class="scale-with-grid wp-post-image" alt="<?php the_title(); ?>" />
+											</a>
+										</div>
+									</div>
+									<div class="post-desc-wrapper">
+										<div class="post-desc">
+											<div class="post-meta clearfix">
+												<div class="author-date">
+													</span><span class="date"><span> 发布 </span><i class="icon-clock"></i><?php the_date('Y-m-d'); ?></span>
+												</div>
+											</div>
+											<div class="post-title">
+												<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+											</div>
+											<div class="post-excerpt">
+												<?php the_excerpt(); ?>
+											</div>
+											<div class="post-footer">
+												<div class="button-love">
+													<span class="love-text">赞成?</span><a href="#" class="mfn-love " data-id="2269"><span class="icons-wrapper"><i class="icon-heart-empty-fa"></i><i class="icon-heart-fa"></i></span><span class="label"><?php echo random_int(120, 2999)?></span></a>
+												</div>
+												<div class="post-links">
+													<i class="icon-doc-text"></i><a href="<?php the_permalink(); ?>" class="post-more">阅读详情</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<?php
+							endwhile;
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+							// Previous/next page navigation.
+							the_posts_pagination( array(
+								'prev_text'          => __( 'Previous page', 'twentysixteen' ),
+								'next_text'          => __( 'Next page', 'twentysixteen' ),
+								'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
+							) );
 
-			// End the loop.
-			endwhile;
+						// If no content, include the "No posts found" template.
+						else :
+							get_template_part( 'template-parts/content', 'none' );
 
-			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentysixteen' ),
-				'next_text'          => __( 'Next page', 'twentysixteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
-			) );
-
-		// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+						endif;
+						?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

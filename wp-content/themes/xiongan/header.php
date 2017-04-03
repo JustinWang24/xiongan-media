@@ -22,7 +22,14 @@
 	<?php wp_head(); ?>
 </head>
 
-<body class="with_aside aside_right layout-full-width header-stack header-magazine minimalist-header sticky-header sticky-white hide-title-area no-content-padding">
+<?php
+	$bodyClass = 'with_aside aside_right layout-full-width header-stack header-magazine minimalist-header sticky-header sticky-white hide-title-area no-content-padding';
+	if(is_category()){
+		$bodyClass = 'archive category with_aside aside_right layout-full-width header-stack header-magazine minimalist-header sticky-header sticky-white';
+	}
+?>
+
+<body class="<?php echo $bodyClass; ?>">
 <div id="Wrapper" class="site">
 	<!-- Header Wrapper -->
 	<div id="Header_wrapper">
@@ -133,6 +140,29 @@
 				</div>
 			</div>
 		</header>
+		<?php
+			if(is_category()){
+				$currentCategory = get_queried_object();
+				?>
+				<div id="Subheader">
+					<div class="container">
+						<div class="column one">
+							<h1 class="title"><?php echo $currentCategory->name; ?></h1>
+							<!--BreadCrumbs area-->
+							<ul class="breadcrumbs">
+								<li>
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>">首页</a><span><i class="icon-right-open"></i></span>
+								</li>
+								<li>
+									<a href="#"><?php echo $currentCategory->name; ?></a><span><i class="icon-right-open"></i></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<?php
+			}
+		?>
 	</div>
 
 	<div id="content">

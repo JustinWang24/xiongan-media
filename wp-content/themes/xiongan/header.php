@@ -7,6 +7,7 @@
 <html <?php language_attributes(); ?> class="no-js">
 <!--<![endif]-->
 <head>
+	<meta name="360-site-verification" content="97784d8bac54d62578afb21936f1739f" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
@@ -45,10 +46,10 @@
 								如果您有合作与推广需求?
 							</li>
 							<li class="phone">
-								<i class="icon-phone"></i><a href="tel:+61413012206">+61 413 012 206</a>
+								<i class="icon-phone"></i><a href="tel:+61413012206">海外 +61 413 012 206</a>&nbsp;<a href="tel:13810680828">中国大陆 +86 13810680828</a>
 							</li>
 							<li class="mail">
-								<i class="icon-mail-line"></i><a href="mailto:w.yue@yahoo.com">w.yue@yahoo.com</a>
+								<i class="icon-mail-line"></i><a href="mailto:w.yue@yahoo.com">邮件 w.yue@yahoo.com</a>
 							</li>
 						</ul>
 						<!--Social info area-->

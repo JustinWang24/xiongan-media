@@ -7,47 +7,72 @@
  * @since Twenty Sixteen 1.0
  */
 ?>
+<div class="sections_group">
+	<div id="post-<?php the_ID(); ?>" class="post format-standard has-post-thumbnail">
+		<div class="section section-post-header">
+			<div class="section_wrapper clearfix">
+				<!-- One full width row-->
+				<br>
+				<div class="column one post-header">
+					<div class="button-love">
+						<a href="#" class="mfn-love " data-id="2271">
+							<span class="icons-wrapper">
+								<i class="icon-heart-empty-fa"></i>
+								<i class="icon-heart-fa"></i></span><span class="label"><?php echo random_int(120, 2999); ?></span></a>
+					</div>
+					<div class="title_wrapper">
+						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+						<div class="post-meta clearfix">
+							<div class="author-date">
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+								<span class="date">发表 <i class="icon-clock"></i>
+									<time class="entry-date" datetime="" >
+										<?php echo get_the_date(); ?>
+									</time>
+								</span>
+							</div>
 
-	<?php twentysixteen_excerpt(); ?>
+							<div class="category mata-tags">
+								<span class="cat-btn">文章标签 <i class="icon-down-dir"></i></span>
+								<div class="cat-wrapper">
+									<ul>
+										<?php
+											$tags = get_the_tags();
+											foreach ($tags as $tag) {
+												?>
+													<li>
+														<a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
+													</li>
+												<?php
+											}
 
-	<?php twentysixteen_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-			the_content();
-
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
-				'separator'   => '<span class="screen-reader-text">, </span>',
-			) );
-
-			if ( '' !== get_the_author_meta( 'description' ) ) {
-				get_template_part( 'template-parts/biography' );
-			}
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php twentysixteen_entry_meta(); ?>
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-					get_the_title()
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-		?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+										?>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Post Featured Element (image / video / gallery)-->
+			</div>
+		</div>
+		<!-- Post Content-->
+		<div class="post-wrapper-content">
+			<div class="entry-content">
+				<div class="section the_content">
+					<div class="section_wrapper">
+						<div class="the_content_wrapper">
+							<?php the_content(); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section section-post-footer">
+				<div class="section_wrapper clearfix">
+					<!-- One full width row-->
+					<div class="column one post-pager"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

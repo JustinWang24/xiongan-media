@@ -60,6 +60,9 @@
 							<li class="twitter">
 								<a href="https://twitter.com/XionganNews" title="Twitter"><i class="icon-twitter"></i></a>
 							</li>
+							<li class="twitter">
+								<a href="<?php echo get_template_directory_uri() ?>/images/qrcode_xiongan.jpg" title="关注微信: 附都雄安  关注有关雄安的最新资讯" style="color: #ff0000;" class="zoom" rel="prettyphoto">关注微信: 附都雄安</a>
+							</li>
 						</ul>
 					</div>
 				</div>

@@ -9362,7 +9362,7 @@ div.pp_default .pp_description {
 	font-size: 11px;
 	font-weight: 700;
 	line-height: 14px;
-	margin: 5px 50px 5px 0;
+	margin: 5px 50px 5px 20px;
 }
 div.pp_default .pp_bottom .pp_left {
 	background: url(../images/prettyPhoto/default/sprite.png) -78px -127px no-repeat;

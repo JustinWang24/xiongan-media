@@ -57,7 +57,7 @@ $data = get_fields();
                                                     <div class="post-desc">
                                                         <div class="post-meta clearfix">
                                                             <div class="author-date">
-                                                                    </span><span class="date"><span> 发表 </span><i class="icon-clock"></i> <?php echo substr($newsPost->post_date,1,11); ?></span>
+                                                                    </span><span class="date"><span> 发表 </span><i class="icon-clock"></i> <?php echo substr($newsPost->post_date,0,11); ?></span>
                                                             </div>
                                                             <div class="category">
                                                                 <span class="cat-btn">Categories <i class="icon-down-dir"></i></span>

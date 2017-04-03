@@ -84,7 +84,7 @@ $data = get_fields();
                                                         </div>
                                                         <div class="post-footer">
                                                             <div class="button-love">
-                                                                <span class="love-text">赞同吗?</span><a href="#" class="mfn-love " data-id="2275"><span class="icons-wrapper"><i class="icon-heart-empty-fa"></i><i class="icon-heart-fa"></i></span><span class="label">45</span></a>
+                                                                <span class="love-text">赞同吗?</span><a href="#" class="mfn-love " data-id="2275"><span class="icons-wrapper"><i class="icon-heart-empty-fa"></i><i class="icon-heart-fa"></i></span><span class="label"><?php echo random_int(800,2999) ?></span></a>
                                                             </div>
                                                             <div class="post-links">
                                                                 <i class="icon-doc-text"></i><a href="<?php echo get_permalink($newsPost) ?>" class="post-more">阅读详情</a>

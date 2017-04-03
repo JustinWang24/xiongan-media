@@ -115,12 +115,12 @@
 
 							<!-- Banner area - only for certain pages-->
 							<div class="banner_wrapper">
-								<h2 class="site-subtitle">
+								<h3 class="site-subtitle" style="line-height: 60px; ">
 									<?php
 									$description = get_bloginfo( 'description', 'display' );
 									echo $description;
 									?>
-								</h2>
+								</h3>
 							</div>
 							<!-- Header Searchform area-->
 							<div class="search_wrapper">

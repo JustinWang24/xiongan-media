@@ -40,7 +40,7 @@
 		<!-- Categories Area -->
 		<aside class="widget widget_categories">
 			<h3>段子手</h3>
-			<ul>
+
 				<?php
 				$newsCategory = get_category_by_slug( 'jokes' );
 				$args = array(
@@ -53,15 +53,17 @@
 
 					foreach ($newsArray as $_post) {
 						?>
+			<ul>
 						<li class="cat-item cat-item-2">
 							<?php echo $_post->post_content; ?>
 						</li>
+			</ul>
 						<br>
 						<?php
 					}
 				}
 				?>
-			</ul>
+
 		</aside>
 	</div>
 </div>

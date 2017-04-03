@@ -46,7 +46,7 @@ $data = get_fields();
                                             $frontPageStory = $frontPageStoryArray[0];
                                         }
                                         if($frontPageStory){
-                                            echo get_the_post_thumbnail($frontPageStory);
+                                            //echo get_the_post_thumbnail($frontPageStory);
                                         }
                                     ?>
                                 </div>
@@ -72,9 +72,6 @@ $data = get_fields();
                                                 ?>
 
                                         <div class="post  format-standard has-post-thumbnail     post-item isotope-item clearfix"
-                                            <div class="date_label">
-                                                <?php echo $storyPost->post_date; ?>
-                                            </div>
                                             <div class="image_frame post-photo-wrapper scale-with-grid">
                                                 <div class="image_wrapper">
                                                     <a href="<?php echo get_permalink($storyPost) ?>">

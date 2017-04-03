@@ -67,6 +67,8 @@ $data = get_fields();
                                                 if($index>3){
                                                     break;
                                                 }
+                                        $img_id = get_post_thumbnail_id( $storyPost->ID );
+                                        $image  = wp_get_attachment_image_src( $img_id, 'single-post-thumbnail' )[0];
                                                 ?>
 
                                         <div class="post  format-standard has-post-thumbnail     post-item isotope-item clearfix"
@@ -77,7 +79,7 @@ $data = get_fields();
                                                 <div class="image_wrapper">
                                                     <a href="<?php echo get_permalink($storyPost) ?>">
                                                         <div class="mask"></div>
-                                                        <img width="576" height="450" src="<?php echo get_the_post_thumbnail($storyPost); ?>" class="scale-with-grid wp-post-image" alt="home_press_blog_1" />
+                                                        <img width="576" height="450" src="<?php echo $image; ?>" class="scale-with-grid wp-post-image" alt="home_press_blog_1" />
                                                     </a>
                                                     <div class="image_links double">
                                                         <a href="<?php echo get_permalink($storyPost) ?>" class="zoom" rel="prettyphoto">
@@ -172,6 +174,8 @@ $data = get_fields();
                                         );
                                         $newsArray = get_posts( $args );
                                         foreach ($newsArray as $newsPost) {
+                                            $img_id = get_post_thumbnail_id( $newsPost->ID );
+                                            $image  = wp_get_attachment_image_src( $img_id, 'single-post-thumbnail' )[0];
                                         ?>
                                             <div class="post  format-standard has-post-thumbnail  post-item isotope-item clearfix">
                                                 <div class="date_label">
@@ -180,10 +184,10 @@ $data = get_fields();
                                                 <div class="image_frame post-photo-wrapper scale-with-grid">
                                                     <div class="image_wrapper">
                                                         <a href="<?php echo get_permalink($newsPost) ?>">
-                                                            <div class="mask"></div><img width="576" height="450" src="<?php echo get_the_post_thumbnail($newsPost); ?>" class="scale-with-grid wp-post-image" alt="home_press_blog_4" />
+                                                            <div class="mask"></div><img width="576" height="450" src="<?php echo $image; ?>" class="scale-with-grid wp-post-image" alt="home_press_blog_4" />
                                                         </a>
                                                         <div class="image_links double">
-                                                            <a href="<?php echo get_the_post_thumbnail($newsPost); ?>" class="zoom" rel="prettyphoto"><i class="icon-search"></i></a><a href="<?php echo get_permalink($newsPost) ?>" class="link"><i class="icon-link"></i></a>
+                                                            <a href="<?php echo $image; ?>" class="zoom" rel="prettyphoto"><i class="icon-search"></i></a><a href="<?php echo get_permalink($newsPost) ?>" class="link"><i class="icon-link"></i></a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -264,11 +268,13 @@ $data = get_fields();
                                         );
                                         $policyArray = get_posts( $args );
                                         foreach ($policyArray as $_post) {
+                                            $img_id = get_post_thumbnail_id( $_post->ID );
+                                            $image  = wp_get_attachment_image_src( $img_id, 'single-post-thumbnail' )[0];
                                         ?>
                                             <li class="post  format-standard has-post-thumbnail ">
                                                 <div class="item_wrapper">
                                                     <div class="image_frame scale-with-grid">
-                                                        <div class="image_wrapper"><img width="576" height="450" src="<?php echo get_the_post_thumbnail($_post); ?>" class="scale-with-grid wp-post-image" alt="<?php echo get_the_title($_post); ?>" />
+                                                        <div class="image_wrapper"><img width="576" height="450" src="<?php echo $image; ?>" class="scale-with-grid wp-post-image" alt="<?php echo get_the_title($_post); ?>" />
                                                         </div>
                                                     </div>
                                                     <div class="date_label">
@@ -317,11 +323,13 @@ $data = get_fields();
                                         );
                                         $policyArray = get_posts( $args );
                                         foreach ($policyArray as $_post) {
+                                            $img_id = get_post_thumbnail_id( $_post->ID );
+                                            $image  = wp_get_attachment_image_src( $img_id, 'single-post-thumbnail' )[0];
                                             ?>
                                             <li class="post  format-standard has-post-thumbnail ">
                                                 <div class="item_wrapper">
                                                     <div class="image_frame scale-with-grid">
-                                                        <div class="image_wrapper"><img width="576" height="450" src="<?php echo get_the_post_thumbnail($_post); ?>" class="scale-with-grid wp-post-image" alt="<?php echo get_the_title($_post); ?>" />
+                                                        <div class="image_wrapper"><img width="576" height="450" src="<?php echo $image; ?>" class="scale-with-grid wp-post-image" alt="<?php echo get_the_title($_post); ?>" />
                                                         </div>
                                                     </div>
                                                     <div class="date_label">
@@ -369,6 +377,8 @@ $data = get_fields();
                             );
                             $commentsArray = get_posts( $args );
                             foreach ($commentsArray as $_post) {
+                                $img_id = get_post_thumbnail_id( $_post->ID );
+                                $image  = wp_get_attachment_image_src( $img_id, 'single-post-thumbnail' )[0]
                                 ?>
                                 <!-- One Third (1/3) Column -->
                                 <div class="column one-third column_photo_box">
@@ -376,7 +386,7 @@ $data = get_fields();
                                         <h4><?php echo get_the_title($_post) ?></h4>
                                         <div class="image_frame">
                                             <div class="image_wrapper">
-                                                <div class="mask"></div><img class="scale-with-grid" src="<?php echo get_permalink($_post) ?>" alt="<?php echo get_the_title($_post) ?>" />
+                                                <div class="mask"></div><img class="scale-with-grid" src="<?php echo $image ?>" alt="<?php echo get_the_title($_post) ?>" />
                                             </div>
                                         </div>
                                         <div class="desc">

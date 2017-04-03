@@ -41,7 +41,7 @@ $data = get_fields();
                                         ?>
                                             <div class="post  format-standard has-post-thumbnail  post-item isotope-item clearfix">
                                                 <div class="date_label">
-                                                    <?php echo substr($newsPost->post_date,1,11); ?>
+                                                    <?php echo substr($newsPost->post_date,0,11); ?>
                                                 </div>
                                                 <div class="image_frame post-photo-wrapper scale-with-grid">
                                                     <div class="image_wrapper">
@@ -140,7 +140,7 @@ $data = get_fields();
                                                         </div>
                                                     </div>
                                                     <div class="date_label">
-                                                        <?php echo substr($_post->post_date,1,11); ?>
+                                                        <?php echo substr($_post->post_date,0,11); ?>
                                                     </div>
                                                     <div class="desc">
                                                         <h4><a href="<?php echo get_permalink($_post) ?>"><?php echo get_the_title($_post); ?></a></h4>
@@ -195,7 +195,7 @@ $data = get_fields();
                                                         </div>
                                                     </div>
                                                     <div class="date_label">
-                                                        <?php echo substr($_post->post_date,1,11); ?>
+                                                        <?php echo substr($_post->post_date,0,11); ?>
                                                     </div>
                                                     <div class="desc">
                                                         <h4><a href="<?php echo get_permalink($_post) ?>"><?php echo get_the_title($_post); ?></a></h4>

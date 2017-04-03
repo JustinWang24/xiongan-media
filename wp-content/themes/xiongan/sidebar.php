@@ -49,14 +49,17 @@
 					'category'         => $newsCategory->cat_ID
 				);
 				$newsArray = get_posts( $args );
-				foreach ($newsArray as $_post) {
-					?>
-					<li class="cat-item cat-item-2">
-						<?php echo $_post->post_content; ?>
-					</li>
-					<?php
-				}
+				if($newsArray){
 
+					foreach ($newsArray as $_post) {
+						?>
+						<li class="cat-item cat-item-2">
+							<?php echo $_post->post_content; ?>
+						</li>
+						<br>
+						<?php
+					}
+				}
 				?>
 			</ul>
 		</aside>

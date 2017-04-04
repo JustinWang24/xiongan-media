@@ -49,7 +49,7 @@
 		</aside>
 		<!-- Categories Area -->
 		<aside class="widget widget_categories">
-			<h3>搞笑段子手</h3>
+			<h3>不可靠消息 :)</h3>
 
 				<?php
 				$newsCategory = get_category_by_slug( 'jokes' );

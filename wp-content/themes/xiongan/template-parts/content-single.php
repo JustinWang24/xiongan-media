@@ -69,7 +69,7 @@
 									</div>
 								</div>
 							</div>
-							<div itemprop="articleBody">
+							<div itemprop="articleBody" style="font-size: 16px; line-height: 30px; padding: 30px;">
 								<?php the_content(); ?>
 							</div>
 						</div>

@@ -7,7 +7,7 @@
  * @since Twenty Sixteen 1.0
  */
 ?>
-<div class="sections_group">
+<div class="sections_group" itemscope itemtype="http://schema.org/NewsArticle">
 	<div id="post-<?php the_ID(); ?>" class="post format-standard has-post-thumbnail">
 		<div class="section section-post-header">
 			<div class="section_wrapper clearfix">
@@ -21,12 +21,12 @@
 								<i class="icon-heart-fa"></i></span><span class="label"><?php echo random_int(120, 2999); ?></span></a>
 					</div>
 					<div class="title_wrapper">
-						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+						<?php the_title( '<h1 class="entry-title" itemprop="headline">', '</h1>' ); ?>
 						<div class="post-meta clearfix">
 							<div class="author-date">
 
 								<span class="date">发表 <i class="icon-clock"></i>
-									<time class="entry-date" datetime="" >
+									<time class="entry-date" itemprop="datePublished">
 										<?php echo get_the_date(); ?>
 									</time>
 								</span>
@@ -41,11 +41,10 @@
 											foreach ($tags as $tag) {
 												?>
 													<li>
-														<a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
+														<a itemprop="url" href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
 													</li>
 												<?php
 											}
-
 										?>
 									</ul>
 								</div>
@@ -65,12 +64,14 @@
 							<div class="column one single-photo-wrapper">
 
 								<div class="image_frame" style="margin: 10px;">
-									<div class="image_wrapper">
+									<div class="image_wrapper" itemprop="image">
 										<?php the_post_thumbnail(); ?>
 									</div>
 								</div>
 							</div>
-							<?php the_content(); ?>
+							<div itemprop="articleBody">
+								<?php the_content(); ?>
+							</div>
 						</div>
 					</div>
 				</div>

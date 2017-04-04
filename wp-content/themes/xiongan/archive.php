@@ -36,7 +36,7 @@ get_header(); ?>
 							while ( have_posts() ) : the_post();
 
 								?>
-								<div class="post  format-standard has-post-thumbnail     post-item isotope-item clearfix">
+								<div class="post  format-standard has-post-thumbnail post-item isotope-item clearfix">
 									<div class="image_frame post-photo-wrapper scale-with-grid">
 										<div class="image_wrapper">
 											<a href="<?php the_permalink(); ?>">

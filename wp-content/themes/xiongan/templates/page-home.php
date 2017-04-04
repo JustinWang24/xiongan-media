@@ -18,9 +18,15 @@ $data = get_fields();
                         <div class="items_group clearfix">
                             <!-- Page Title-->
                             <!-- One full width row-->
+                            <?php
+                                $newsCategory = get_category_by_slug( 'news' );
+                                $category_link = get_category_link( $newsCategory->cat_ID );
+                            ?>
                             <div class="column one column_fancy_heading">
                                 <div class="fancy_heading fancy_heading_icon">
-                                    <h2 class="title">雄安新闻 - 导读</h2>
+                                    <h2 class="title">
+                                        <i class="icon-link" style="color: #ff0000;"></i><a href="<?php echo esc_url( $category_link ); ?>">雄安新闻 - 导读</a>
+                                    </h2>
                                 </div>
                             </div>
                             <!-- One full width row-->
@@ -28,7 +34,6 @@ $data = get_fields();
                                 <div class="blog_wrapper isotope_wrapper clearfix">
                                     <div class="posts_group lm_wrapper classic">
                                         <?php
-                                        $newsCategory = get_category_by_slug( 'news' );
                                         $args = array(
                                             'posts_per_page'   => 4,
                                             'offset'           => 0,
@@ -58,16 +63,6 @@ $data = get_fields();
                                                         <div class="post-meta clearfix">
                                                             <div class="author-date">
                                                                     </span><span class="date"><span> 发表 </span><i class="icon-clock"></i> <?php echo substr($newsPost->post_date,0,11); ?></span>
-                                                            </div>
-                                                            <div class="category">
-                                                                <span class="cat-btn">目录标签 <i class="icon-down-dir"></i></span>
-                                                                <div class="cat-wrapper">
-                                                                    <ul class="post-categories">
-                                                                        <li>
-                                                                            <a href="#" rel="category tag">新闻</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="post-title">
@@ -116,13 +111,19 @@ $data = get_fields();
                             <!-- One full width row-->
                             <div class="column one column_blog_slider">
                                 <div class="blog_slider clearfix ">
+                                    <?php
+                                    $policyCategory = get_category_by_slug( 'policy' );
+                                    $category_link = get_category_link( $policyCategory->cat_ID );
+                                    ?>
                                     <div class="blog_slider_header">
-                                        <h4 class="title">政策导向</h4>
+                                        <h4 class="title">
+                                            <i class="icon-link" style="color: #ff0000;"></i><a href="<?php echo esc_url($category_link) ?>">政策导向</a>
+                                        </h4>
                                         <a class="button button_js slider_prev" href="#"><span class="button_icon"><i class="icon-left-open-big"></i></span></a><a class="button button_js slider_next" href="#"><span class="button_icon"><i class="icon-right-open-big"></i></span></a>
                                     </div>
                                     <ul class="blog_slider_ul">
                                         <?php
-                                        $policyCategory = get_category_by_slug( 'policy' );
+
                                         $args = array(
                                             'posts_per_page'   => 3,
                                             'offset'           => 0,
@@ -171,13 +172,23 @@ $data = get_fields();
                             <!-- One full width row-->
                             <div class="column one column_blog_slider">
                                 <div class="blog_slider clearfix ">
+                                    <?php
+                                    $realEstate = get_category_by_slug( 'real-estate' );
+                                    $investment = get_category_by_slug( 'investment' );
+                                    $category_link1 = get_category_link( $realEstate->cat_ID );
+                                    $category_link2 = get_category_link( $investment->cat_ID );
+                                    ?>
                                     <div class="blog_slider_header">
-                                        <h4 class="title">投资与房地产</h4><a class="button button_js slider_prev" href="#"><span class="button_icon"><i class="icon-left-open-big"></i></span></a><a class="button button_js slider_next" href="#"><span class="button_icon"><i class="icon-right-open-big"></i></span></a>
+                                        <h4 class="title">
+                                            <i class="icon-link" style="color: #ff0000;"></i><a href="<?php echo esc_url($category_link1); ?>">投资</a>与
+                                            <a href="<?php echo esc_url($category_link1); ?>">房地产</a>
+                                        </h4>
+                                        <a class="button button_js slider_prev" href="#">
+                                            <span class="button_icon"><i class="icon-left-open-big"></i></span></a><a class="button button_js slider_next" href="#"><span class="button_icon"><i class="icon-right-open-big"></i></span></a>
                                     </div>
                                     <ul class="blog_slider_ul">
                                         <?php
-                                        $realEstate = get_category_by_slug( 'real-estate' );
-                                        $investment = get_category_by_slug( 'investment' );
+
                                         $args = array(
                                             'posts_per_page'   => 6,
                                             'offset'           => 0,
@@ -225,13 +236,19 @@ $data = get_fields();
                     <div class="section_wrapper clearfix">
                         <div class="items_group clearfix">
                             <!-- One full width row-->
+                            <?php
+                                $comments = get_category_by_slug( 'comments' );
+                                $category_link = get_category_link( $comments->cat_ID );
+                            ?>
                             <div class="column one column_column">
                                 <div class="column_attr ">
-                                    <h2>观点与评论</h2>
+                                    <h4>
+                                        <i class="icon-link" style="color: #ff0000;"></i><a href="<?php echo esc_url($category_link); ?>">观点与评论</a>
+                                    </h4>
                                 </div>
                             </div>
                             <?php
-                            $comments = get_category_by_slug( 'comments' );
+
                             $args = array(
                                 'posts_per_page'   => 6,
                                 'offset'           => 0,

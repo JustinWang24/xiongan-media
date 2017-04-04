@@ -169,5 +169,5 @@
 		?>
 	</div>
 
-	<div id="content">
+	<div id="content" itemscope itemtype="http://schema.org/NewsArticle">
 		<div class="content_wrapper clearfix">

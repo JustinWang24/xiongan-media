@@ -20,7 +20,7 @@ $data = get_fields();
                             <!-- One full width row-->
                             <div class="column one column_fancy_heading">
                                 <div class="fancy_heading fancy_heading_icon">
-                                    <h2 class="title">新闻导读</h2>
+                                    <h2 class="title">雄安新闻 - 导读</h2>
                                 </div>
                             </div>
                             <!-- One full width row-->

@@ -49,12 +49,12 @@
 		</aside>
 		<!-- Categories Area -->
 		<aside class="widget widget_categories">
-			<h3>段子手</h3>
+			<h3>搞笑段子手</h3>
 
 				<?php
 				$newsCategory = get_category_by_slug( 'jokes' );
 				$args = array(
-					'posts_per_page'   => 3,
+					'posts_per_page'   => 9,
 					'offset'           => 0,
 					'category'         => $newsCategory->cat_ID
 				);

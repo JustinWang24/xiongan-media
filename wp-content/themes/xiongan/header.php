@@ -30,7 +30,7 @@
 	}
 ?>
 
-<body class="<?php echo $bodyClass; ?>">
+<body class="<?php echo $bodyClass; ?>" itemscope itemtype="http://schema.org.cn/Article">
 <div id="Wrapper" class="site">
 	<!-- Header Wrapper -->
 	<div id="Header_wrapper">
@@ -169,5 +169,5 @@
 		?>
 	</div>
 
-	<div id="content" itemscope itemtype="http://schema.org/NewsArticle">
+	<div id="content">
 		<div class="content_wrapper clearfix">

@@ -44,14 +44,15 @@ $data = get_fields();
                                             $img_id = get_post_thumbnail_id( $newsPost->ID );
                                             $image  = wp_get_attachment_image_src( $img_id, 'single-post-thumbnail' )[0];
                                         ?>
-                                            <div class="post  format-standard has-post-thumbnail  post-item isotope-item clearfix">
+                                            <div class="post  format-standard has-post-thumbnail  post-item isotope-item clearfix"  itemscope itemtype="http://schema.org.cn/NewsArticle" >
                                                 <div class="date_label">
                                                     <?php echo substr($newsPost->post_date,0,11); ?>
                                                 </div>
                                                 <div class="image_frame post-photo-wrapper scale-with-grid">
-                                                    <div class="image_wrapper">
+                                                    <div class="image_wrapper" itemprop="image">
                                                         <a href="<?php echo get_permalink($newsPost) ?>">
-                                                            <div class="mask"></div><img width="576" height="450" src="<?php echo $image; ?>" class="scale-with-grid wp-post-image" alt="home_press_blog_4" />
+                                                            <div class="mask"></div>
+                                                            <img  itemprop="image" width="576" height="450" src="<?php echo $image; ?>" class="scale-with-grid wp-post-image" alt="home_press_blog_4" />
                                                         </a>
                                                         <div class="image_links double">
                                                             <a href="<?php echo $image; ?>" class="zoom" rel="prettyphoto"><i class="icon-search"></i></a><a href="<?php echo get_permalink($newsPost) ?>" class="link"><i class="icon-link"></i></a>
@@ -66,14 +67,14 @@ $data = get_fields();
                                                             </div>
                                                         </div>
                                                         <div class="post-title">
-                                                            <h2 class="entry-title">
+                                                            <h2 class="entry-title" itemprop="headline">
                                                                 <a href="<?php echo get_permalink($newsPost) ?>">
                                                                     <?php echo get_the_title($newsPost); ?>
                                                                 </a>
                                                             </h2>
                                                         </div>
                                                         <div class="post-excerpt">
-                                                            <p class="big">
+                                                            <p class="big" itemprop="description">
                                                                 <?php echo $newsPost->post_excerpt; ?>
                                                             </p>
                                                         </div>

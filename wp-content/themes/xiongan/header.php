@@ -14,7 +14,7 @@
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
-
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/images/favicon.ico">
 	<!-- FONTS -->
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400,400italic,700'>
@@ -49,7 +49,7 @@
 								<i class="icon-phone"></i><a href="tel:+61413012206">海外 +61 413 012 206</a>&nbsp;<a href="tel:13810680828">中国大陆 +86 13810680828</a>
 							</li>
 							<li class="mail">
-								<i class="icon-mail-line"></i><a href="mailto:w.yue@yahoo.com">邮件 w.yue@yahoo.com</a>
+								<i class="icon-mail-line"></i><a href="mailto:info@xiongan.media">邮件 info@xiongan.media</a>
 							</li>
 						</ul>
 						<!--Social info area-->

@@ -14,7 +14,7 @@ $data = get_fields();
     <div class="content_wrapper clearfix">
         <div class="sections_group">
             <div class="entry-content">
-                <div class="section sections_style_4">
+                <div class="section sections_style_4" style="margin-top: -40px;">
                     <div class="section_wrapper clearfix">
                         <div class="items_group clearfix">
                             <!-- Page Title-->

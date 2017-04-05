@@ -5,6 +5,10 @@
 .post-desc{
     padding-top: 1px;
 }
+.photo_box h4{
+    height: 50px;
+    overflow: hidden;
+}
 .photo_box .desc p{
     height: 144px;
     overflow: hidden;

@@ -2,8 +2,9 @@
 /*
 Template Name: Home Page
 */
-
 get_header();
+
+$mobileDetector = get_mobile_detector();
 
 the_post();
 $data = get_fields();
@@ -22,7 +23,7 @@ $data = get_fields();
                                 $newsCategory = get_category_by_slug( 'news' );
                                 $category_link = get_category_link( $newsCategory->cat_ID );
                             ?>
-                            <div class="column one column_fancy_heading">
+                            <div class="column one column_fancy_heading" <?php echo $mobileDetector->isMobile()?'style="display:none;"':null; ?>>
                                 <div class="fancy_heading fancy_heading_icon">
                                     <h2 class="title">
                                         <i class="icon-link" style="color: #ff0000;"></i><a href="<?php echo esc_url( $category_link ); ?>">雄安新闻 - 导读</a>
@@ -61,11 +62,6 @@ $data = get_fields();
                                                 </div>
                                                 <div class="post-desc-wrapper">
                                                     <div class="post-desc">
-                                                        <div class="post-meta clearfix">
-                                                            <div class="author-date">
-                                                                    </span><span class="date"><span> 发表 </span><i class="icon-clock"></i> <?php echo substr($newsPost->post_date,0,11); ?></span>
-                                                            </div>
-                                                        </div>
                                                         <div class="post-title">
                                                             <h2 class="entry-title" itemprop="headline">
                                                                 <a href="<?php echo get_permalink($newsPost) ?>">

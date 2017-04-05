@@ -1,0 +1,11 @@
+.image_wrapper{
+    height: 148px;
+    overflow: hidden;
+}
+.post-desc{
+    padding-top: 1px;
+}
+.photo_box .desc p{
+    height: 144px;
+    overflow: hidden;
+}

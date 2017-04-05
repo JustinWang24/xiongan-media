@@ -126,9 +126,6 @@ $data = get_fields();
                                                         <div class="image_wrapper"><img width="576" height="450" src="<?php echo $image; ?>" class="scale-with-grid wp-post-image" alt="<?php echo get_the_title($_post); ?>" />
                                                         </div>
                                                     </div>
-                                                    <div class="date_label">
-                                                        <?php echo substr($_post->post_date,0,11); ?>
-                                                    </div>
                                                     <div class="desc">
                                                         <h4><a href="<?php echo get_permalink($_post) ?>"><?php echo get_the_title($_post); ?></a></h4>
                                                         <hr class="hr_color" />
@@ -189,9 +186,6 @@ $data = get_fields();
                                                     <div class="image_frame scale-with-grid">
                                                         <div class="image_wrapper"><img width="576" height="450" src="<?php echo $image; ?>" class="scale-with-grid wp-post-image" alt="<?php echo get_the_title($_post); ?>" />
                                                         </div>
-                                                    </div>
-                                                    <div class="date_label">
-                                                        <?php echo substr($_post->post_date,0,11); ?>
                                                     </div>
                                                     <div class="desc">
                                                         <h4><a href="<?php echo get_permalink($_post) ?>"><?php echo get_the_title($_post); ?></a></h4>

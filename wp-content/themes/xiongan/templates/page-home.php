@@ -35,7 +35,7 @@ $data = get_fields();
                                     <div class="posts_group lm_wrapper classic">
                                         <?php
                                         $args = array(
-                                            'posts_per_page'   => 4,
+                                            'posts_per_page'   => 9,
                                             'offset'           => 0,
                                             'category'         => $newsCategory->cat_ID
                                         );

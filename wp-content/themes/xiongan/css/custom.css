@@ -25,3 +25,12 @@
     width: 100%;
     display: block;
 }
+
+.widget_categories ul{
+    background: rgba(255, 0, 0, 0.7);
+}
+.widget_categories ul li{
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: bold;
+}

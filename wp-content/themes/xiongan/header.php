@@ -36,7 +36,6 @@
 	<div id="Header_wrapper">
 		<!-- Header -->
 		<header id="Header">
-			<!-- Header Top -  Info Area -->CfHhQpS7 WebMelbourne307
 			<div id="Action_bar">
 				<div class="container">
 					<div class="column one">

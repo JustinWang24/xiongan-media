@@ -48,13 +48,13 @@
 			</div>
 		</aside>
 		<!-- Categories Area -->
-		<aside class="widget widget_categories">
+		<aside class="widget widget_categories has-shadow has-radius">
 			<h3>不可靠消息 :)</h3>
 
 				<?php
 				$newsCategory = get_category_by_slug( 'jokes' );
 				$args = array(
-					'posts_per_page'   => 9,
+					'posts_per_page'   => 6,
 					'offset'           => 0,
 					'category'         => $newsCategory->cat_ID
 				);

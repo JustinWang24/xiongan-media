@@ -13,3 +13,14 @@
     height: 144px;
     overflow: hidden;
 }
+.has-shadow{
+    -webkit-box-shadow: 5px 3px 28px 2px rgba(204,204,204,0.86);
+    -moz-box-shadow: 5px 3px 28px 2px rgba(204,204,204,0.86);
+    box-shadow: 5px 3px 28px 2px rgba(204,204,204,0.86);
+}
+.has-radius{
+    border-radius: 6px;
+}
+.bg-opacity{
+    background
+}

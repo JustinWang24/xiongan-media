@@ -26,7 +26,7 @@
 		</aside>
 		<!-- Text Area -->
 		<aside class="widget widget_text">
-			<h3>关注我们</h3>
+			<h3 style="color: #ff0000;">关注下列社交平台-内容更多</h3>
 			<div class="textwidget">
 				<a href="https://www.facebook.com/%E9%9B%84%E5%AE%89%E6%96%B0%E9%97%BB-199747600515288/" class="icon_bar icon_bar_facebook icon_bar_small">
 					<span class="t"><i class="icon-facebook"></i></span>

@@ -36,7 +36,7 @@
 	<div id="Header_wrapper">
 		<!-- Header -->
 		<header id="Header">
-			<div id="Action_bar">
+			<div id="Action_bar" style="display: none;">
 				<div class="container">
 					<div class="column one">
 						<!-- Header - contact info area-->

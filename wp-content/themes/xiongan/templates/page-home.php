@@ -177,8 +177,7 @@ $data = get_fields();
                                     ?>
                                     <div class="blog_slider_header">
                                         <h4 class="title">
-                                            <i class="icon-link" style="color: #ff0000;"></i><a href="<?php echo esc_url($category_link1); ?>">投资</a>与
-                                            <a href="<?php echo esc_url($category_link1); ?>">房地产</a>
+                                            <i class="icon-link" style="color: #ff0000;"></i><a href="<?php echo esc_url($category_link1); ?>">投资</a>/<a href="<?php echo esc_url($category_link1); ?>">房地产</a>
                                         </h4>
                                         <a class="button button_js slider_prev" href="#">
                                             <span class="button_icon"><i class="icon-left-open-big"></i></span></a><a class="button button_js slider_next" href="#"><span class="button_icon"><i class="icon-right-open-big"></i></span></a>

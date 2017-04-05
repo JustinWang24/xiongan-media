@@ -62,12 +62,7 @@
 					<div class="section_wrapper">
 						<div class="the_content_wrapper">
 							<div class="column one single-photo-wrapper">
-
-								<div class="image_frame" style="margin: 10px;">
-									<div class="image_wrapper" itemprop="image">
-										<?php the_post_thumbnail(); ?>
-									</div>
-								</div>
+								<?php the_post_thumbnail(); ?>
 							</div>
 							<div itemprop="articleBody" style="font-size: 16px; line-height: 30px; padding: 30px;">
 								<?php the_content(); ?>

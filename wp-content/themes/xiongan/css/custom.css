@@ -21,6 +21,7 @@
 .has-radius{
     border-radius: 6px;
 }
-.bg-opacity{
-    background
+.single-photo-wrapper img{
+    width: 100%;
+    display: block;
 }

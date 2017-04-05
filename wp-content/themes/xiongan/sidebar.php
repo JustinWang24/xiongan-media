@@ -48,7 +48,7 @@
 			</div>
 		</aside>
 		<!-- Categories Area -->
-		<aside class="widget widget_categories has-shadow has-radius">
+		<aside class="widget widget_categories">
 			<h3>不可靠消息 :)</h3>
 
 				<?php
@@ -63,7 +63,7 @@
 
 					foreach ($newsArray as $_post) {
 						?>
-			<ul>
+			<ul class="has-shadow has-radius">
 						<li class="cat-item cat-item-2">
 							<?php echo $_post->post_content; ?>
 						</li>

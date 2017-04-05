@@ -19,7 +19,7 @@
 		<!-- Search form-->
 		<aside class="widget widget_search">
 			<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<input type="text" class="field" placeholder="您感兴趣的话题" value="<?php echo get_search_query(); ?>" name="s" />
+				<input type="text" class="field" placeholder="搜索您感兴趣的话题" value="<?php echo get_search_query(); ?>" name="s" />
 				<input type="submit" class="submit" value="搜索">
 				</input>
 			</form>

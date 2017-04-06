@@ -92,134 +92,13 @@ $data = get_fields();
                         </div>
                     </div>
                 </div>
-                <div class="section sections_style_4">
-                    <div class="section_wrapper clearfix">
-                        <div class="items_group clearfix">
-                            <!-- One full width row-->
-                            <div class="column one column_blog_slider">
-                                <div class="blog_slider clearfix ">
-                                    <?php
-                                    $policyCategory = get_category_by_slug( 'policy' );
-                                    $category_link = get_category_link( $policyCategory->cat_ID );
-                                    ?>
-                                    <div class="blog_slider_header">
-                                        <h4 class="title">
-                                            <i class="icon-link" style="color: #ff0000;"></i><a href="<?php echo esc_url($category_link) ?>">政策导向</a>
-                                        </h4>
-                                        <a class="button button_js slider_prev" href="#"><span class="button_icon"><i class="icon-left-open-big"></i></span></a><a class="button button_js slider_next" href="#"><span class="button_icon"><i class="icon-right-open-big"></i></span></a>
-                                    </div>
-                                    <ul class="blog_slider_ul">
-                                        <?php
 
-                                        $args = array(
-                                            'posts_per_page'   => 3,
-                                            'offset'           => 0,
-                                            'category'         => $policyCategory->cat_ID
-                                        );
-                                        $policyArray = get_posts( $args );
-                                        foreach ($policyArray as $_post) {
-                                            $img_id = get_post_thumbnail_id( $_post->ID );
-                                            $image  = wp_get_attachment_image_src( $img_id, 'single-post-thumbnail' )[0];
-//                                            $image = get_the_post_thumbnail_url($_post,add_image_size( 'custom-size', 260, 148 ));
-                                        ?>
-                                            <li class="post  format-standard has-post-thumbnail ">
-                                                <div class="item_wrapper">
-                                                    <div class="image_frame scale-with-grid">
-                                                        <div class="image_wrapper"><img width="576" height="450" src="<?php echo $image; ?>" class="scale-with-grid wp-post-image" alt="<?php echo get_the_title($_post); ?>" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="desc">
-                                                        <h4><a href="<?php echo get_permalink($_post) ?>"><?php echo get_the_title($_post); ?></a></h4>
-                                                        <hr class="hr_color" />
-                                                        <a href="<?php echo get_permalink($_post) ?>" class="button button_left button_js"><span class="button_icon"><i class="icon-layout"></i></span><span class="button_label">阅读详情</span></a>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        <?php
-                                        }
-                                        ?>
-                                    </ul>
-                                    <div class="slider_pagination"></div>
-                                </div>
-                            </div>
-                            <!-- One full width row-->
-                            <div class="column one column_divider">
-                                <div class="hr_wide ">
-                                    <hr>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section sections_style_4">
-                    <div class="section_wrapper clearfix">
-                        <div class="items_group clearfix">
-                            <!-- One full width row-->
-                            <div class="column one column_blog_slider">
-                                <div class="blog_slider clearfix ">
-                                    <?php
-                                    $realEstate = get_category_by_slug( 'real-estate' );
-                                    $investment = get_category_by_slug( 'investment' );
-                                    $category_link1 = get_category_link( $realEstate->cat_ID );
-                                    $category_link2 = get_category_link( $investment->cat_ID );
-                                    ?>
-                                    <div class="blog_slider_header">
-                                        <h4 class="title">
-                                            <i class="icon-link" style="color: #ff0000;"></i><a href="<?php echo esc_url($category_link1); ?>">投资</a>/<a href="<?php echo esc_url($category_link1); ?>">房地产</a>
-                                        </h4>
-                                        <a class="button button_js slider_prev" href="#">
-                                            <span class="button_icon"><i class="icon-left-open-big"></i></span></a><a class="button button_js slider_next" href="#"><span class="button_icon"><i class="icon-right-open-big"></i></span></a>
-                                    </div>
-                                    <ul class="blog_slider_ul">
-                                        <?php
-
-                                        $args = array(
-                                            'posts_per_page'   => 6,
-                                            'offset'           => 0,
-                                            'category'         => $realEstate->cat_ID.','.$investment->cat_ID
-                                        );
-                                        $policyArray = get_posts( $args );
-                                        foreach ($policyArray as $_post) {
-                                            $img_id = get_post_thumbnail_id( $_post->ID );
-                                            $image  = wp_get_attachment_image_src( $img_id, 'single-post-thumbnail' )[0];
-//                                            $image = get_the_post_thumbnail_url($_post,add_image_size( 'custom-size', 260, 148 ));
-                                            ?>
-                                            <li class="post  format-standard has-post-thumbnail ">
-                                                <div class="item_wrapper">
-                                                    <div class="image_frame scale-with-grid">
-                                                        <div class="image_wrapper"><img width="576" height="450" src="<?php echo $image; ?>" class="scale-with-grid wp-post-image" alt="<?php echo get_the_title($_post); ?>" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="desc">
-                                                        <h4><a href="<?php echo get_permalink($_post) ?>"><?php echo get_the_title($_post); ?></a></h4>
-                                                        <hr class="hr_color" />
-                                                        <a href="<?php echo get_permalink($_post) ?>" class="button button_left button_js"><span class="button_icon"><i class="icon-layout"></i></span><span class="button_label">阅读详情</span></a>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <?php
-                                        }
-                                        ?>
-                                    </ul>
-                                    <div class="slider_pagination"></div>
-                                </div>
-                            </div>
-                            <!-- Page devider -->
-                            <!-- One full width row-->
-                            <div class="column one column_divider">
-                                <div class="hr_wide ">
-                                    <hr>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="section sections_style_4">
                     <div class="section_wrapper clearfix">
                         <div class="items_group clearfix">
                             <!-- One full width row-->
                             <?php
-                                $comments = get_category_by_slug( 'comments' );
+                                $comments = get_category_by_slug( 'frontpage_story' );
                                 $category_link = get_category_link( $comments->cat_ID );
                             ?>
                             <div class="column one column_column">
@@ -232,7 +111,7 @@ $data = get_fields();
                             <?php
 
                             $args = array(
-                                'posts_per_page'   => 6,
+                                'posts_per_page'   => 9,
                                 'offset'           => 0,
                                 'category'         => $comments->cat_ID
                             );

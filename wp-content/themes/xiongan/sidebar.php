@@ -51,7 +51,7 @@
 			<h3>赞助商家</h3>
 			<div class="widget widget_text">
 				<a href="https://www.webmelbourne.com" title="企业网站快速搭建$660起">
-					<img src="<?php echo get_template_directory_uri() ?>/images/web_melbourne.jpg" alt="WebMelbourne 维墨科技">
+					<img src="<?php echo get_template_directory_uri() ?>/images/web_melbourne.jpg" style="max-width: 320px;" alt="WebMelbourne 维墨科技">
 				</a>
 			</div>
 		</aside>

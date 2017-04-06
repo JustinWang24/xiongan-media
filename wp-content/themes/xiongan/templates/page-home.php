@@ -118,8 +118,9 @@ $data = get_fields();
                                         );
                                         $policyArray = get_posts( $args );
                                         foreach ($policyArray as $_post) {
-                                            $img_id = get_post_thumbnail_id( $_post->ID );
-                                            $image  = wp_get_attachment_image_src( $img_id, 'single-post-thumbnail' )[0];
+//                                            $img_id = get_post_thumbnail_id( $_post->ID );
+//                                            $image  = wp_get_attachment_image_src( $img_id, 'single-post-thumbnail' )[0];
+                                            $image = get_the_post_thumbnail_url($_post,add_image_size( 'custom-size', 303, 221 ));
                                         ?>
                                             <li class="post  format-standard has-post-thumbnail ">
                                                 <div class="item_wrapper">
@@ -179,8 +180,9 @@ $data = get_fields();
                                         );
                                         $policyArray = get_posts( $args );
                                         foreach ($policyArray as $_post) {
-                                            $img_id = get_post_thumbnail_id( $_post->ID );
-                                            $image  = wp_get_attachment_image_src( $img_id, 'single-post-thumbnail' )[0];
+//                                            $img_id = get_post_thumbnail_id( $_post->ID );
+//                                            $image  = wp_get_attachment_image_src( $img_id, 'single-post-thumbnail' )[0];
+                                            $image = get_the_post_thumbnail_url($_post,add_image_size( 'custom-size', 303, 221 ));
                                             ?>
                                             <li class="post  format-standard has-post-thumbnail ">
                                                 <div class="item_wrapper">

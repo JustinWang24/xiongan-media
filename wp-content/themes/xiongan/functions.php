@@ -254,7 +254,7 @@ function twentysixteen_scripts() {
 	// 添加自定义的 css
 	wp_enqueue_style( 'structure', get_template_directory_uri() . '/css/structure.css', array( 'twentysixteen-style' ), '20160816' );
 	wp_enqueue_style( 'press', get_template_directory_uri() . '/css/press.css', array( 'twentysixteen-style' ), '20160816' );
-	wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/custom.css', array( 'twentysixteen-style' ), '201704056' );
+	wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/custom.css', array( 'twentysixteen-style' ), '201704057' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

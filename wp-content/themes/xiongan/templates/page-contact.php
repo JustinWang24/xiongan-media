@@ -21,7 +21,7 @@ $data = get_fields();
                             <div class="items_group clearfix">
                                 <div class="column one-third column_contact_box">
                                     <div class="opening_hours flv_style_15">
-                                        <h3>联系我们</h3>
+                                        <h4>联系我们</h4>
                                         <div class="opening_hours_wrapper">
                                             <ul>
                                                 <li class="phone">
@@ -40,19 +40,19 @@ $data = get_fields();
                                 <!-- One Fourth (1/4) Column -->
                                 <div class="column one-third column_opening_hours">
                                     <div class="opening_hours flv_style_16">
-                                        <h3>社交媒体</h3>
+                                        <h4>社交媒体</h4>
                                         <div class="opening_hours_wrapper">
                                             <ul>
                                                 <li class="facebook">
                                                     <a href="https://www.facebook.com/%E9%9B%84%E5%AE%89%E6%96%B0%E9%97%BB-199747600515288/" title="Facebook">
-                                                        <i class="icon-facebook"></i>雄安新闻
+                                                        <i class="icon-facebook"></i>雄安新闻@Facebook
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="https://twitter.com/XionganNews" title="Twitter"><i class="icon-twitter"></i>雄安新闻</a>
+                                                    <a href="https://twitter.com/XionganNews" title="Twitter"><i class="icon-twitter"></i>雄安新闻@Twitter</a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="<?php echo get_template_directory_uri() ?>/images/qrcode_xiongan.jpg" title="关注微信: 附都雄安  关注有关雄安的最新资讯" style="color: #ff0000;" class="zoom" rel="prettyphoto">关注微信: 附都雄安</a>
+                                                    <a href="<?php echo get_template_directory_uri() ?>/images/qrcode_xiongan.jpg" title="关注微信: 雄安新闻@微信" style="color: #ff0000;" class="zoom" rel="prettyphoto">关注微信: 附都雄安</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -61,8 +61,8 @@ $data = get_fields();
                                 <!-- One Fourth (1/4) Column -->
                                 <div class="column one-third column_info_box">
                                     <div class="opening_hours flv_style_17" style="padding-bottom: 14px;">
-                                        <h3>欢迎投稿</h3>
-                                        <div class="infobox_wrapper">
+                                        <h4>欢迎投稿</h4>
+                                        <div class="opening_hours_wrapper">
                                             <p>
                                                 如果您有话不吐不快,那就赶紧<a href="mailto:info@xiongan.media">发邮件</a>给我们吧. 无论您是原创文章, 音频, 视频, 我们都照收不误, 并保证第一时间发表.
                                             </p>

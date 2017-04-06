@@ -34,8 +34,9 @@ $data = get_fields();
                                         );
                                         $newsArray = get_posts( $args );
                                         foreach ($newsArray as $newsPost) {
-                                            $img_id = get_post_thumbnail_id( $newsPost->ID );
-                                            $image  = wp_get_attachment_image_src( $img_id, 'single-post-thumbnail' )[0];
+//                                            $img_id = get_post_thumbnail_id( $newsPost->ID );
+//                                            $image  = wp_get_attachment_image_src( $img_id, 'single-post-thumbnail' )[0];
+                                            $image = get_the_post_thumbnail_url($newsPost,add_image_size( 'custom-size', 303, 221 ));
                                         ?>
                                             <div class="post  format-standard has-post-thumbnail  post-item isotope-item clearfix"  itemscope itemtype="http://schema.org.cn/NewsArticle" >
                                                 <div class="date_label">

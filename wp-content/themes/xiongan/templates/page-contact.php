@@ -28,7 +28,7 @@ $data = get_fields();
                                                     <a href="tel:+61413012206">海外 +61 413 012 206</a>
                                                 </li>
                                                 <li class="phone">
-                                                    <a href="tel:13810680828">中国大陆 +86 13810680828</a>
+                                                    <a href="tel:13810680828">中国 +86 13810680828</a>
                                                 </li>
                                                 <li class="email">
                                                     <a href="mailto:info@xiongan.media">邮件 info@xiongan.media</a>

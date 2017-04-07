@@ -46,3 +46,7 @@
 .opening_hours_wrapper p{
     font-size: 13px;
 }
+.edd_download_image:after, .image_frame .image_wrapper .mask{
+    -webkit-box-shadow: none;
+    box-shadow:none;
+}

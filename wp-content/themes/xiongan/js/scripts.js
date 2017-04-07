@@ -1,31 +1,13 @@
 (function($) {
-
-
     "use strict";
-
-
-    /* ---------------------------------------------------------------------------
-	 * Global vars
-	 * --------------------------------------------------------------------------- */
-
     var scrollticker;	// Scroll Timer | don't need to set this in every scroll
-    
     var rtl 			= $('body').hasClass('rtl');
     var simple			= $('body').hasClass('style-simple');
-    
     var top_bar_top 	= '61px';
     var header_H 		= 0;
-
     var pretty 			= false;
 	 var mobile_init_W 	=  1240;
-	
-	
 
-    
-    
-	
-	
-	
 /* ---------------------------------------------------------------------------
  * Helper Item
  * --------------------------------------------------------------------------- */
@@ -306,7 +288,7 @@ jQuery(document).ready(function() {
 	/* ---------------------------------------------------------------------------
 	 * TwentyTwenty [ before_after ]
 	 * --------------------------------------------------------------------------- */
-	jQuery('.before_after.twentytwenty-container').twentytwenty();
+	//jQuery('.before_after.twentytwenty-container').twentytwenty();
 	
 	/* ---------------------------------------------------------------------------
 	 * Content sliders
@@ -617,56 +599,6 @@ jQuery(document).ready(function() {
 	onePageScroll();
 	
 	/* ---------------------------------------------------------------------------
-	 * One Page | Menu with Active on Scroll
-	 * --------------------------------------------------------------------------- 
-	function onePageMenu() {
-		if (jQuery('body').hasClass('one-page')) {
-			var menu = jQuery('#menu');
-			// remove active
-			menu.find('li').removeClass('current-menu-item currenet-menu-parent current-menu-ancestor current_page_item current_page_parent current_page_ancestor');
-			// add attr [data-hash]
-			jQuery('a[href]', menu).each(function() {
-				// data-hash
-				var url = jQuery(this).attr('href');
-				var hash = '#' + url.split('#')[1];
-				if (hash && jQuery(hash).length) { // check if element with specified ID exists
-					jQuery(this).attr('data-hash', hash);
-					jQuery(hash).attr('data-id', hash);
-				}
-			});
-			// click
-			jQuery('#menu a[data-hash]').click(function(e) {
-				e.preventDefault(); // only with: body.one-page
-				// active
-				menu.find('li').removeClass('current-menu-item');
-				jQuery(this).closest('li').addClass('current-menu-item');
-				var hash = jQuery(this).attr('data-hash');
-				var stickyH = 0;
-				var tabsHeaderH = jQuery(hash).siblings('.ui-tabs-nav').innerHeight();
-				// FIX | sticky top bar height
-				var topBar = jQuery('.sticky-header #Top_bar');
-				if (topBar.hasClass('is-sticky')) {
-					stickyH = jQuery('.sticky-header #Top_bar').innerHeight();
-				} else {
-					topBar.addClass('is-sticky');
-					stickyH = jQuery('.sticky-header #Top_bar').innerHeight();
-					topBar.removeClass('is-sticky');
-				}
-				// FIX | responsive 
-				var responsive = jQuery('.responsive-menu-toggle');
-				if (responsive.length) {
-					if (responsive.is(":visible")) {
-						stickyH = 0;
-					}
-				}
-				jQuery('html, body').animate({
-					scrollTop: jQuery(hash).offset().top - stickyH - tabsHeaderH
-				}, 500);
-			});
-		}
-	};
-	onePageMenu(); */
-	/* ---------------------------------------------------------------------------
 		 * Menu | One Page | Active on Scroll & Click
 		 * --------------------------------------------------------------------------- */
 		
@@ -932,19 +864,6 @@ jQuery(document).ready(function() {
 	jQuery('.gallery-icon > a').wrap('<div class="image_frame scale-with-grid"><div class="image_wrapper"></div></div>').prepend('<div class="mask"></div>').attr('rel', 'prettyphoto[gallery]').attr('data-rel', 'prettyphoto[gallery]').children('img').css('height', 'auto').css('width', '100%');
 	
 	/* ---------------------------------------------------------------------------
-	 * PrettyPhoto
-	 * --------------------------------------------------------------------------- */
-	if ((typeof(window.mfn_prettyphoto) !== 'undefined' && !window.mfn_prettyphoto.disable)) {
-		jQuery('a[rel^="prettyphoto"],a.woocommerce-main-image.zoom, .prettyphoto, a[data-rel^="prettyPhoto[product-gallery]"]').prettyPhoto({
-			default_width: window.mfn_prettyphoto.width ? window.mfn_prettyphoto.width : 500,
-			default_height: window.mfn_prettyphoto.height ? window.mfn_prettyphoto.height : 344,
-			show_title: false,
-			deeplinking: false,
-			social_tools: false
-		});
-	}
-	
-	/* ---------------------------------------------------------------------------
 		 * Intro | Scroll v arrow
 		 * --------------------------------------------------------------------------- */
 		
@@ -958,17 +877,6 @@ jQuery(document).ready(function() {
 			}			
 		});
 		
-	/* ---------------------------------------------------------------------------
-	 * Black & White
-	 * --------------------------------------------------------------------------- */
-	jQuery('.greyscale .image_wrapper > a, .greyscale .client_wrapper .gs-wrapper, .greyscale.portfolio-photo a').has('img').BlackAndWhite({
-		hoverEffect: true,
-		intensity: 1 // opacity: 0, 0.1, ... 1
-	});
-	
-	/* ---------------------------------------------------------------------------
-	 * Sliding Top
-	 * --------------------------------------------------------------------------- */
 	jQuery(".sliding-top-control").click(function(e) {
 		e.preventDefault();
 		jQuery('#Sliding-top .widgets_wrapper').slideToggle();
@@ -1030,10 +938,10 @@ jQuery(document).ready(function() {
 	var ua = navigator.userAgent,
 		isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
 	if (!isMobileWebkit && jQuery(window).width() >= 768) {
-		$.stellar({
-			horizontalScrolling: false,
-			responsive: true
-		});
+		//$.stellar({
+		//	horizontalScrolling: false,
+		//	responsive: true
+		//});
 	}
 	
 	/* ---------------------------------------------------------------------------
@@ -1074,14 +982,9 @@ jQuery(document).ready(function() {
 			// isotope fix: second resize
 
 				
-				jQuery('.lm_wrapper.isotope').imagesLoaded().progress( function() {
-					jQuery('.lm_wrapper.isotope').isotope('layout');
-				});
-				
-//				setTimeout(function(){
-//					$('.lm_wrapper.isotope').isotope( 'layout');
-//				},1000);	
-
+				//jQuery('.lm_wrapper.isotope').imagesLoaded().progress( function() {
+				//	jQuery('.lm_wrapper.isotope').isotope('layout');
+				//});
 		});
 	});
 	
@@ -1343,113 +1246,6 @@ jQuery(window).scroll(function() {
  * jQuery(window).load
  * ----------------------------------------------------------------------------------------------------------------------- */
 jQuery(window).load(function() {
-	
-	/* ---------------------------------------------------------------------------
-	 * Isotope
-	 * --------------------------------------------------------------------------- */
-	// Portfolio - Isotope
-	//jQuery('.portfolio_wrapper  .isotope:not(.masonry-flat)').isotope({
-	//	itemSelector: '.portfolio-item',
-	//	layoutMode: 'fitRows'
-	//});
-	//// Portfolio - Masonry Flat
-	//jQuery('.portfolio_wrapper .masonry-flat').isotope({
-	//	itemSelector: '.portfolio-item',
-	//	masonry: {
-	//		columnWidth: 1
-	//	}
-	//});
-	// Blog & Portfolio - Masonry
-	//jQuery('.masonry.isotope').isotope({
-	//	itemSelector: '.isotope-item',
-	//	layoutMode: 'masonry'
-	//});
-	// Blog & Portfolio - Masonry
-	//	$('.isotope.masonry, .isotope.masonry-hover, .isotope.masonry-minimal').isotope({
-	//		itemSelector	: '.isotope-item',
-	//		layoutMode		: 'masonry',
-	//	});
-	
-	/* ---------------------------------------------------------------------------
-	 * Chart
-	 * --------------------------------------------------------------------------- */
-	jQuery('.chart').waypoint({
-		offset: '100%',
-		triggerOnce: true,
-		handler: function() {
-			var color = jQuery(this).attr('data-color');
-			jQuery(this).easyPieChart({
-				animate: 1000,
-				barColor: color,
-				lineCap: 'circle',
-				lineWidth: 8,
-				size: 140,
-				scaleColor: false,
-				trackColor: '#f8f8f8'
-			});
-		}
-	});
-	
-	/* ---------------------------------------------------------------------------
-	 * Skills
-	 * --------------------------------------------------------------------------- */
-	jQuery('.bars_list').waypoint({
-		offset: '100%',
-		triggerOnce: true,
-		handler: function() {
-			jQuery(this).addClass('hover');
-		}
-	});
-	
-	/* ---------------------------------------------------------------------------
-	 * Progress Icons
-	 * --------------------------------------------------------------------------- */
-	jQuery('.progress_icons').waypoint({
-		offset: '100%',
-		triggerOnce: true,
-		handler: function() {
-			var el = jQuery(this);
-			var active = el.attr('data-active');
-			var color = el.attr('data-color');
-			var icon = el.find('.progress_icon');
-			var timeout = 200; // timeout in milliseconds
-			icon.each(function(i) {
-				if (i < active) {
-					var time = (i + 1) * timeout;
-					setTimeout(function() {
-						jQuery(icon[i]).addClass('themebg').css('background-color', color);
-					}, time);
-				}
-			});
-		}
-	});
-	
-	/* ---------------------------------------------------------------------------
-	 * Animate Math [counter, quick_fact, etc.]
-	 * --------------------------------------------------------------------------- */
-	jQuery('.animate-math .number').waypoint({
-		offset: '100%',
-		triggerOnce: true,
-		handler: function() {
-			var el = jQuery(this);
-			var duration = Math.floor((Math.random() * 1000) + 1000);
-			var to = el.attr('data-to');
-			jQuery({
-				property: 0
-			}).animate({
-				property: to
-			}, {
-				duration: duration,
-				easing: 'linear',
-				step: function() {
-					el.text(Math.floor(this.property));
-				},
-				complete: function() {
-					el.text(this.property);
-				}
-			});
-		}
-	});
 	// carouFredSel wrapper | Height
 	mfn_carouFredSel_height();
 	// Sidebar | Height
@@ -1923,7 +1719,7 @@ window.mfn_sliders = {
 	testimonials: 7000
 };
 jQuery(document).ready(function($) {
-	jQuery('.masonry.isotope,.isotope').isotope();
+	//jQuery('.masonry.isotope,.isotope').isotope();
 	jQuery('#configurator .control').click(function(e) {
 		e.preventDefault();
 		if (jQuery('#configurator').hasClass('active')) {
@@ -1950,20 +1746,7 @@ jQuery(document).ready(function($) {
 	});
 	demosSliderH();
 	
-	/* ---------------------------------------------------------------------------
-	 * niceScroll
-	 * --------------------------------------------------------------------------- */
-	jQuery(".demos-slider").niceScroll({
-		autohidemode: false,
-		cursorborder: 0,
-		cursorborderradius: 5,
-		cursorcolor: '#222222',
-		cursorwidth: 0,
-		horizrailenabled: false,
-		mousescrollstep: 40,
-		scrollspeed: 60
-	});
-	
+
 	/* ---------------------------------------------------------------------------
 	 * Parallax Backgrounds
 	 * --------------------------------------------------------------------------- */

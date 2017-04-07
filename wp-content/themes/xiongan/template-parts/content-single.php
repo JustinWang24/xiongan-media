@@ -19,7 +19,7 @@
 						<a href="#" class="mfn-love " data-id="2271">
 							<span class="icons-wrapper">
 								<i class="icon-heart-empty-fa"></i>
-								<i class="icon-heart-fa"></i></span><span class="label"><?php echo random_int(120, 2999); ?></span></a>
+								<i class="icon-heart-fa"></i></span></a>
 					</div>
 					<div class="title_wrapper">
 						<?php the_title( '<h1 class="entry-title" itemprop="headline">', '</h1>' ); ?>

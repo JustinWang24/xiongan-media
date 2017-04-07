@@ -6,6 +6,7 @@
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
  */
+$mobileDetector = get_mobile_detector();
 ?>
 
 <?php if ( is_active_sidebar( 'sidebar-1' ) && false ) : ?>
@@ -14,7 +15,7 @@
 	</aside><!-- .sidebar .widget-area -->
 <?php endif; ?>
 
-<div class="sidebar sidebar-1 four columns">
+<div class="sidebar sidebar-1 four columns" <?php echo $mobileDetector->isMobile() ? 'style="width: 260px !important;"':null; ?>>
 	<div class="widget-area clearfix ">
 		<!-- Search form-->
 		<aside class="widget widget_search">

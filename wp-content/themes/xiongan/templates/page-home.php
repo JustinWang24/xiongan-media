@@ -46,7 +46,7 @@ $data = get_fields();
                                                     <div class="image_wrapper" itemprop="image">
                                                         <a href="<?php echo get_permalink($newsPost) ?>">
                                                             <div class="mask"></div>
-                                                            <img  itemprop="image" width="576" height="450" src="<?php echo $image; ?>" class="scale-with-grid wp-post-image" alt="home_press_blog_4" />
+                                                            <img  itemprop="image" src="<?php echo $image; ?>" class="scale-with-grid wp-post-image" alt="home_press_blog_4" />
                                                         </a>
                                                     </div>
                                                 </div>

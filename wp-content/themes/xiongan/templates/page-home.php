@@ -15,7 +15,7 @@ $data = get_fields();
         <div class="sections_group">
             <div class="entry-content">
                 <div class="section sections_style_4" style="margin-top: -40px;">
-                    <div class="section_wrapper clearfix" <?php echo $mobileDetector->isMobile() ? 'style="width: 260px !important;"':null; ?>>
+                    <div class="section_wrapper clearfix" <?php echo $mobileDetector->isMobile() ? 'style="width: 75% !important;"':null; ?>>
                         <div class="items_group clearfix">
                             <!-- Page Title-->
                             <!-- One full width row-->
@@ -43,7 +43,7 @@ $data = get_fields();
                                                 </div>
                                                 <div class="image_frame post-photo-wrapper scale-with-grid">
                                                     <div class="image_wrapper" itemprop="image">
-                                                        <a href="<?php echo get_permalink($newsPost) ?>">
+                                                        <a href="<?php echo get_permalink($newsPost) ?>" <?php echo $mobileDetector->isMobile()?'style="text-align:center;"':null; ?>>
                                                             <div class="mask"></div>
                                                             <img  itemprop="image" src="<?php echo $image; ?>" class="scale-with-grid wp-post-image" alt="home_press_blog_4" />
                                                         </a>

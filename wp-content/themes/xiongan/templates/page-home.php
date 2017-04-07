@@ -59,7 +59,7 @@ $data = get_fields();
                                                                 </a>
                                                             </h2>
                                                         </div>
-                                                        <div class="post-excerpt">
+                                                        <div class="post-excerpt" style="height: 50px; overflow: hidden;">
                                                             <p class="big" itemprop="description">
                                                                 <?php echo $newsPost->post_excerpt; ?>
                                                             </p>

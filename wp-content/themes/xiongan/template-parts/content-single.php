@@ -6,6 +6,7 @@
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
  */
+	$mobileDetector = get_mobile_detector();
 ?>
 <div class="sections_group" itemscope itemtype="http://schema.org/NewsArticle">
 	<div id="post-<?php the_ID(); ?>" class="post format-standard has-post-thumbnail">
@@ -61,7 +62,7 @@
 				<div class="section the_content">
 					<div class="section_wrapper">
 						<div class="the_content_wrapper">
-							<div itemprop="articleBody" style="font-size: 16px; line-height: 30px; padding: 30px;">
+							<div itemprop="articleBody" style="font-size: 16px; line-height: 30px; <?php echo $mobileDetector->isMobile() ? 'padding: 30px;':null; ?>">
 								<?php the_content(); ?>
 							</div>
 						</div>

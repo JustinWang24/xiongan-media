@@ -8,6 +8,7 @@
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
  */
+$mobileDetector = get_mobile_detector();
 ?>
 
 		</div><!-- .site-content -->
@@ -25,7 +26,7 @@
 	</div>
 	<div class="widgets_wrapper">
 		<div class="container">
-			<div class="one-fourth column">
+			<div class="one-fourth column" <?php echo $mobileDetector->isMobile()?null:'style="display:none;"' ?>>
 				<!-- Text Area -->
 				<aside id="text-7" class="widget widget_text">
 					<div class="textwidget"><img src="<?php echo get_template_directory_uri() ?>/images/logo-reverse.png" alt="">

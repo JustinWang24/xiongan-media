@@ -3483,9 +3483,9 @@ hr{background-color:rgba(0,0,0,.08);color:rgba(0,0,0,.08)}
 #Sliding-top .Recent_posts ul li .desc h6,#Sliding-top .widget_recent_entries ul li a,#Sliding-top .widget_best_sellers li,#Sliding-top .widget_featured_products li,#Sliding-top .widget_recent_reviews li,#Sliding-top .widget_recent_products li,#Sliding-top .widget_recently_viewed_products li,#Sliding-top .widget_random_products li,#Sliding-top .widget_top_rated_products li,#Sliding-top .widget_onsale li,#Sliding-top .widget_layered_nav li,#Sliding-top .widget_shopping_cart ul.product_list_widget li,#Sliding-top .widget_products li,#Sliding-top .widget_archive ul li:after,#Sliding-top .widget_nav_menu ul li:after,#Sliding-top table th,#Sliding-top table td{border-color:rgba(255,255,255,.08)}
 
 /* Image frames & Google maps & Icon bar */
-.image_frame,.wp-caption,.google-map,.icon_box .icon_wrapper,.content_slider .content_slider_ul,.author-box .avatar-wrapper,#comments .commentlist > li .photo,.edd_download_image{border-color:#f8f8f8}
+.image_frame,.wp-caption,.google-map,.icon_box .icon_wrapper,.content_slider .content_slider_ul,.author-box .avatar-wrapper,#comments .commentlist > li .photo,.edd_download_image{border-color:#fff;}
 .wp-caption-text{background:#f8f8f8;color:#A6A6A6}
-.image_frame .image_wrapper,.wp-caption img,.icon_box .icon_wrapper:before{border-color:#ffffff;}
+.image_frame .image_wrapper,.wp-caption img,.icon_box .icon_wrapper:before{border-color:#e2e2e2;}
 .image_frame .image_wrapper .mask,.edd_download_image:after{-webkit-box-shadow:inset 0 0 5px 2px rgba(0,0,0,.07);box-shadow:inset 0 0 5px 2px rgba(0,0,0,.07)}
 .image_frame .image_wrapper .mask:after{background:rgba(255,255,255,.4)}
 

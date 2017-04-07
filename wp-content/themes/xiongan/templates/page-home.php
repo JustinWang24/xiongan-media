@@ -15,7 +15,7 @@ $data = get_fields();
         <div class="sections_group">
             <div class="entry-content">
                 <div class="section sections_style_4" style="margin-top: -40px;">
-                    <div class="section_wrapper clearfix">
+                    <div class="section_wrapper clearfix" <?php echo $mobileDetector->isMobile() ? 'style="width: 260px !important;"':null; ?>>
                         <div class="items_group clearfix">
                             <!-- Page Title-->
                             <!-- One full width row-->

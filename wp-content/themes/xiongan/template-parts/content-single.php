@@ -60,7 +60,7 @@
 		<div class="post-wrapper-content">
 			<div class="entry-content">
 				<div class="section the_content">
-					<div class="section_wrapper" <?php echo $mobileDetector->isMobile() ? 'style="width: 90%;"':null; ?>>
+					<div class="section_wrapper" <?php echo $mobileDetector->isMobile() ? 'style="width: 90% !important;"':null; ?>>
 						<div class="the_content_wrapper">
 							<div itemprop="articleBody" style="font-size: 16px; line-height: 30px; <?php echo $mobileDetector->isMobile() ? null:'padding: 30px;'; ?>">
 								<?php the_content(); ?>

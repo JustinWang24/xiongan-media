@@ -265,7 +265,7 @@ function twentysixteen_scripts() {
 	}
 
 	wp_enqueue_script( 'menu-script', get_template_directory_uri() . '/js/mfn.menu.js', array( 'jquery' ), '20160816', true );
-	wp_enqueue_script( 'jplugin-script', get_template_directory_uri() . '/js/jquery.plugins.js', array( 'jquery' ), '20160816', true );
+//	wp_enqueue_script( 'jplugin-script', get_template_directory_uri() . '/js/jquery.plugins.js', array( 'jquery' ), '20160816', true );
 //	wp_enqueue_script( 'jplayer-script', get_template_directory_uri() . '/js/jquery.jplayer.min.js', array( 'jquery' ), '20160816', true );
 //	wp_enqueue_script( 'animate-script', get_template_directory_uri() . '/js/animations/animations.js', array( 'jquery' ), '20160816', true );
 	wp_enqueue_script( 'function-script', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '20160816', true );

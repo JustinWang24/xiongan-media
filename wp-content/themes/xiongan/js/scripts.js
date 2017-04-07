@@ -1247,19 +1247,6 @@ jQuery(document).ready(function() {
 	});
 	
 	/* ---------------------------------------------------------------------------
-	 * WooCommerce
-	 * --------------------------------------------------------------------------- */
-	function addToCart() {
-		jQuery('body').on('click', '.add_to_cart_button', function() {
-			jQuery(this).closest('.product').addClass('adding-to-cart').removeClass('added-to-cart');
-		});
-		jQuery('body').bind('added_to_cart', function() {
-			jQuery('.adding-to-cart').removeClass('adding-to-cart').addClass('added-to-cart');
-		});
-	}
-	addToCart();
-	
-	/* ---------------------------------------------------------------------------
 	 * Iframe height
 	 * --------------------------------------------------------------------------- */
 	function iframeHeight(item, ratio) {
@@ -1373,15 +1360,15 @@ jQuery(window).load(function() {
 		}
 	});
 	// Blog & Portfolio - Masonry
-	jQuery('.masonry.isotope').isotope({
-		itemSelector: '.isotope-item',
-		layoutMode: 'masonry'
-	});
+	//jQuery('.masonry.isotope').isotope({
+	//	itemSelector: '.isotope-item',
+	//	layoutMode: 'masonry'
+	//});
 	// Blog & Portfolio - Masonry
-		$('.isotope.masonry, .isotope.masonry-hover, .isotope.masonry-minimal').isotope({
-			itemSelector	: '.isotope-item',
-			layoutMode		: 'masonry',
-		});
+	//	$('.isotope.masonry, .isotope.masonry-hover, .isotope.masonry-minimal').isotope({
+	//		itemSelector	: '.isotope-item',
+	//		layoutMode		: 'masonry',
+	//	});
 	
 	/* ---------------------------------------------------------------------------
 	 * Chart
@@ -1571,68 +1558,7 @@ function mfnSliderContent(){
 	}
 	
 	
-/*function mfnSliderContent() {
-	jQuery('.content_slider_ul').each(function() {
-		if (jQuery(this).closest('.content_slider').hasClass('carousel')) {
-			var style = {
-				min: 1,
-				max: 6
-			};
-		} else {
-			var style = 1;
-		}
-		// Init carouFredSel
-		jQuery(this).carouFredSel({
-			circular: true,
-			responsive: true,
-			items: {
-				width: 380,
-				visible: style
-			},
-			scroll: {
-				duration: 500,
-				easing: 'swing'
-			},
-			prev: {
-				button: function() {
-					return jQuery(this).closest('.content_slider').find('.slider_prev');
-				}
-			},
-			next: {
-				button: function() {
-					return jQuery(this).closest('.content_slider').find('.slider_next');
-				}
-			},
-			pagination: {
-				container: function() {
-					return jQuery(this).closest('.content_slider').find('.slider_pagination');
-				}
-			},
-			auto: {
-				play: window.mfn_sliders.slider ? true : false,
-				timeoutDuration: window.mfn_sliders.slider ? window.mfn_sliders.slider : 2500,
-			},
-			swipe: {
-				onTouch: true,
-				onMouse: true,
-				onBefore: function() {
-					jQuery(this).find('a').addClass('disable');
-					jQuery(this).find('li').trigger('mouseleave');
-				},
-				onAfter: function() {
-					jQuery(this).find('a').removeClass('disable');
-				}
-			}
-		})
-		// Disable accidental clicks while swiping
-		jQuery(this).on('click', 'a.disable', function() {
-			return false;
-		});
-	});;
-}*/
-	// --- Testimonials ----------------------------------------------------------------
-	
-	function mfnSliderTestimonials(){	
+	function mfnSliderTestimonials(){
 		
 		var pager = function( el, i ){
 	        var img = $( el.$slides[i] ).find('.single-photo-img').html();

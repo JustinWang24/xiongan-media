@@ -1348,17 +1348,17 @@ jQuery(window).load(function() {
 	 * Isotope
 	 * --------------------------------------------------------------------------- */
 	// Portfolio - Isotope
-	jQuery('.portfolio_wrapper  .isotope:not(.masonry-flat)').isotope({
-		itemSelector: '.portfolio-item',
-		layoutMode: 'fitRows'
-	});
-	// Portfolio - Masonry Flat
-	jQuery('.portfolio_wrapper .masonry-flat').isotope({
-		itemSelector: '.portfolio-item',
-		masonry: {
-			columnWidth: 1
-		}
-	});
+	//jQuery('.portfolio_wrapper  .isotope:not(.masonry-flat)').isotope({
+	//	itemSelector: '.portfolio-item',
+	//	layoutMode: 'fitRows'
+	//});
+	//// Portfolio - Masonry Flat
+	//jQuery('.portfolio_wrapper .masonry-flat').isotope({
+	//	itemSelector: '.portfolio-item',
+	//	masonry: {
+	//		columnWidth: 1
+	//	}
+	//});
 	// Blog & Portfolio - Masonry
 	//jQuery('.masonry.isotope').isotope({
 	//	itemSelector: '.isotope-item',

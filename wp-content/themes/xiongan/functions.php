@@ -249,7 +249,7 @@ function twentysixteen_scripts() {
 	wp_enqueue_script( 'twentysixteen-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
 	wp_script_add_data( 'twentysixteen-html5', 'conditional', 'lt IE 9' );
 
-	wp_enqueue_script( 'twentysixteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20160816', true );
+//	wp_enqueue_script( 'twentysixteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20160816', true );
 
 	// 添加自定义的 css
 	wp_enqueue_style( 'structure', get_template_directory_uri() . '/css/structure.css', array( 'twentysixteen-style' ), '20160816' );
@@ -266,19 +266,19 @@ function twentysixteen_scripts() {
 
 	wp_enqueue_script( 'menu-script', get_template_directory_uri() . '/js/mfn.menu.js', array( 'jquery' ), '20160816', true );
 	wp_enqueue_script( 'jplugin-script', get_template_directory_uri() . '/js/jquery.plugins.js', array( 'jquery' ), '20160816', true );
-	wp_enqueue_script( 'jplayer-script', get_template_directory_uri() . '/js/jquery.jplayer.min.js', array( 'jquery' ), '20160816', true );
-	wp_enqueue_script( 'animate-script', get_template_directory_uri() . '/js/animations/animations.js', array( 'jquery' ), '20160816', true );
+//	wp_enqueue_script( 'jplayer-script', get_template_directory_uri() . '/js/jquery.jplayer.min.js', array( 'jquery' ), '20160816', true );
+//	wp_enqueue_script( 'animate-script', get_template_directory_uri() . '/js/animations/animations.js', array( 'jquery' ), '20160816', true );
 	wp_enqueue_script( 'function-script', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '20160816', true );
-	wp_enqueue_script( '1-script', get_template_directory_uri() . '/js/rs-plugin/js/jquery.themepunch.tools.min.js', array( 'jquery' ), '20160816', true );
-	wp_enqueue_script( '2-script', get_template_directory_uri() . '/js/rs-plugin/js/jquery.themepunch.revolution.min.js', array( 'jquery' ), '20160816', true );
-	wp_enqueue_script( '3-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.video.min.js', array( 'jquery' ), '20160816', true );
-	wp_enqueue_script( '4-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.slideanims.min.js', array( 'jquery' ), '20160816', true );
-	wp_enqueue_script( '5-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.actions.min.js', array( 'jquery' ), '20160816', true );
-	wp_enqueue_script( '6-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js', array( 'jquery' ), '20160816', true );
-	wp_enqueue_script( '7-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.kenburn.min.js', array( 'jquery' ), '20160816', true );
-	wp_enqueue_script( '8-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.navigation.min.js', array( 'jquery' ), '20160816', true );
-	wp_enqueue_script( '9-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.migration.min.js', array( 'jquery' ), '20160816', true );
-	wp_enqueue_script( '10-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.parallax.min.js', array( 'jquery' ), '20160816', true );
+//	wp_enqueue_script( '1-script', get_template_directory_uri() . '/js/rs-plugin/js/jquery.themepunch.tools.min.js', array( 'jquery' ), '20160816', true );
+//	wp_enqueue_script( '2-script', get_template_directory_uri() . '/js/rs-plugin/js/jquery.themepunch.revolution.min.js', array( 'jquery' ), '20160816', true );
+//	wp_enqueue_script( '3-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.video.min.js', array( 'jquery' ), '20160816', true );
+//	wp_enqueue_script( '4-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.slideanims.min.js', array( 'jquery' ), '20160816', true );
+//	wp_enqueue_script( '5-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.actions.min.js', array( 'jquery' ), '20160816', true );
+//	wp_enqueue_script( '6-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js', array( 'jquery' ), '20160816', true );
+//	wp_enqueue_script( '7-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.kenburn.min.js', array( 'jquery' ), '20160816', true );
+//	wp_enqueue_script( '8-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.navigation.min.js', array( 'jquery' ), '20160816', true );
+//	wp_enqueue_script( '9-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.migration.min.js', array( 'jquery' ), '20160816', true );
+//	wp_enqueue_script( '10-script', get_template_directory_uri() . '/js/rs-plugin/js/extensions/revolution.extension.parallax.min.js', array( 'jquery' ), '20160816', true );
 	wp_enqueue_script( 'utils-script', get_template_directory_uri() . '/js/utils.js', array( 'jquery' ), '20160816', true );
 
 	wp_localize_script( 'twentysixteen-script', 'screenReaderText', array(

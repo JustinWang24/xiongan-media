@@ -20,15 +20,21 @@
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400,400italic,700'>
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
 	<?php wp_head(); ?>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-96616089-1', 'auto');
+		ga('send', 'pageview');
+	</script>
 </head>
-
 <?php
 	$bodyClass = 'with_aside aside_right layout-full-width header-stack header-magazine minimalist-header sticky-header sticky-white hide-title-area no-content-padding';
 	if(is_category()){
 		$bodyClass = 'archive category with_aside aside_right layout-full-width header-stack header-magazine minimalist-header sticky-header sticky-white';
 	}
 ?>
-
 <body class="<?php echo $bodyClass; ?>" itemscope itemtype="http://schema.org.cn/Article">
 <div id="Wrapper" class="site">
 	<!-- Header Wrapper -->

@@ -252,7 +252,7 @@ function twentysixteen_scripts() {
 //	wp_enqueue_script( 'twentysixteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20160816', true );
 
 	// 添加自定义的 css
-	wp_enqueue_style( 'structure', get_template_directory_uri() . '/css/structure.css', array( 'twentysixteen-style' ), '20160816' );
+	wp_enqueue_style( 'structure', get_template_directory_uri() . '/css/structure.css', array( 'twentysixteen-style' ), '201608161' );
 	wp_enqueue_style( 'press', get_template_directory_uri() . '/css/press.css', array( 'twentysixteen-style' ), '20160816' );
 	wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/custom.css', array( 'twentysixteen-style' ), '201704057' );
 

@@ -2265,14 +2265,14 @@ body.header-stack:not(.template-slider) #Header {
 	display: none;
 }
 .post-photo-wrapper {
-	width: 37%;
+	width: 28%;
 	float: left;
 }
 .post-photo-wrapper iframe {
 	width: 100%;
 }
 .post-desc-wrapper {
-	width: 63%;
+	width: 72%;
 	float: left;
 }
 .post-desc {

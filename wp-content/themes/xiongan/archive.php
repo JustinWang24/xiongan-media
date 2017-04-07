@@ -23,7 +23,7 @@ get_header(); ?>
 
 	</div>
 	<div class="section">
-		<div class="section_wrapper clearfix">
+		<div class="section_wrapper clearfix" <?php echo $mobileDetector->isMobile() ? 'style="width: 75% !important;"':null; ?>>
 			<!--  Filter Area -->
 			<!-- One full width row-->
 			<div class="column one column_blog">
@@ -39,8 +39,8 @@ get_header(); ?>
 								<div class="post  format-standard has-post-thumbnail post-item isotope-item clearfix">
 									<div class="image_frame post-photo-wrapper scale-with-grid">
 										<div class="image_wrapper">
-											<a href="<?php the_permalink(); ?>">
-												<div class="mask"></div><img width="576" height="450" src="<?php the_post_thumbnail_url( add_image_size( 'custom-size', 576, 450 ) ); ?>" class="scale-with-grid wp-post-image" alt="<?php the_title(); ?>" />
+											<a href="<?php the_permalink(); ?>" <?php echo $mobileDetector->isMobile()?'style="text-align:center;"':null; ?>>
+												<div class="mask"></div><img src="<?php the_post_thumbnail_url( add_image_size( 'custom-size', 576, 450 ) ); ?>" class="scale-with-grid wp-post-image" alt="<?php the_title(); ?>" />
 											</a>
 										</div>
 									</div>

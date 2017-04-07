@@ -20,8 +20,7 @@ $data = get_fields();
                             <!-- Page Title-->
                             <!-- One full width row-->
                             <?php
-//                                $newsCategory = get_category_by_slug( 'news' );
-//                                $category_link = get_category_link( $newsCategory->cat_ID );
+                                $jokesCategory = get_category_by_slug( 'jokes' );
                             ?>
                             <div class="column one column_blog">
                                 <div class="blog_wrapper isotope_wrapper clearfix">
@@ -29,7 +28,8 @@ $data = get_fields();
                                         <?php
                                         $args = array(
                                             'posts_per_page'   => 20,
-                                            'offset'           => 0
+                                            'offset'           => 0,
+                                            'category__not_in' => [$jokesCategory->cat_ID]
                                         );
                                         $newsArray = get_posts( $args );
                                         foreach ($newsArray as $newsPost) {

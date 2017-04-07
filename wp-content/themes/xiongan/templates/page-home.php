@@ -20,17 +20,16 @@ $data = get_fields();
                             <!-- Page Title-->
                             <!-- One full width row-->
                             <?php
-                                $newsCategory = get_category_by_slug( 'news' );
-                                $category_link = get_category_link( $newsCategory->cat_ID );
+//                                $newsCategory = get_category_by_slug( 'news' );
+//                                $category_link = get_category_link( $newsCategory->cat_ID );
                             ?>
                             <div class="column one column_blog">
                                 <div class="blog_wrapper isotope_wrapper clearfix">
                                     <div class="posts_group lm_wrapper classic">
                                         <?php
                                         $args = array(
-                                            'posts_per_page'   => 9,
-                                            'offset'           => 0,
-                                            'category'         => $newsCategory->cat_ID
+                                            'posts_per_page'   => 20,
+                                            'offset'           => 0
                                         );
                                         $newsArray = get_posts( $args );
                                         foreach ($newsArray as $newsPost) {
@@ -93,57 +92,6 @@ $data = get_fields();
                     </div>
                 </div>
 
-                <div class="section sections_style_4">
-                    <div class="section_wrapper clearfix">
-                        <div class="items_group clearfix">
-                            <!-- One full width row-->
-                            <?php
-                                $comments = get_category_by_slug( 'frontpage_story' );
-                                $category_link = get_category_link( $comments->cat_ID );
-                            ?>
-                            <div class="column one column_column">
-                                <div class="column_attr ">
-                                    <h4>
-                                        <i class="icon-link" style="color: #ff0000;"></i><a href="<?php echo esc_url($category_link); ?>">观点与评论</a>
-                                    </h4>
-                                </div>
-                            </div>
-                            <?php
-
-                            $args = array(
-                                'posts_per_page'   => 9,
-                                'offset'           => 0,
-                                'category'         => $comments->cat_ID
-                            );
-                            $commentsArray = get_posts( $args );
-                            foreach ($commentsArray as $_post) {
-//                                $img_id = get_post_thumbnail_id( $_post->ID );
-//                                $image  = wp_get_attachment_image_src( $img_id, 'single-post-thumbnail' )[0];
-                                $image = get_the_post_thumbnail_url($_post,add_image_size( 'custom-size', 260, 148 ));
-                                ?>
-                                <!-- One Third (1/3) Column -->
-                                <div class="column one-third column_photo_box">
-                                    <div class="photo_box ">
-                                        <h4><?php echo get_the_title($_post) ?></h4>
-                                        <div class="image_frame">
-                                            <div class="image_wrapper">
-                                                <div class="mask"></div><img class="scale-with-grid" src="<?php echo $image ?>" alt="<?php echo get_the_title($_post) ?>" />
-                                            </div>
-                                        </div>
-                                        <div class="desc">
-                                            <p>
-                                                <?php echo $_post->post_excerpt; ?>
-                                            </p>
-                                            <a href="<?php echo get_permalink($_post) ?>">阅读详情</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- Sidebar area-->

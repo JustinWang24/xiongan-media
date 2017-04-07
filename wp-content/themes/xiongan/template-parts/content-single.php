@@ -62,7 +62,7 @@
 				<div class="section the_content">
 					<div class="section_wrapper">
 						<div class="the_content_wrapper">
-							<div itemprop="articleBody" style="font-size: 16px; line-height: 30px; <?php echo $mobileDetector->isMobile() ? 'padding: 30px;':null; ?>">
+							<div itemprop="articleBody" style="font-size: 16px; line-height: 30px; <?php echo $mobileDetector->isMobile() ? null:'padding: 30px;'; ?>">
 								<?php the_content(); ?>
 							</div>
 						</div>

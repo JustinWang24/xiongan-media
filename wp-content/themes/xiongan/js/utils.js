@@ -1,6 +1,6 @@
 jQuery(document).ready(function(){
-    jQuery('.follow-wechat-btn').on('click',function(e){
+    jQuery('.feature-news-trigger').on('click',function(e){
         e.preventDefault();
-        console.log('hi');
+        console.log(jQuery(this).data('goto'));
     });
 });

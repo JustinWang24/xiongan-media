@@ -37,13 +37,14 @@ $mobileDetector = get_mobile_detector();
 					<span class="t"><i class="icon-twitter"></i></span>
 					<span class="b"><i class="icon-twitter"></i></span>
 				</a>
-				<a href="<?php echo get_template_directory_uri() ?>/images/qrcode_xiongan.jpg" class="icon_bar icon_bar_twitter icon_bar_small follow-wechat-btn zoom" title="关注微信: 附都雄安  关注有关雄安的最新资讯" rel="prettyphoto" style="width: 140px;">
-							<span class="t" style="width: 140px;">
-								关注微信: 附都雄安
+				<a href="<?php echo get_template_directory_uri() ?>/images/34.pic.jpg" title="关注微信: 雄安群众  关注有关雄安的最新资讯"
+					   style="color: #ff0000;width: 140px;" class="icon_bar icon_bar_twitter icon_bar_small follow-wechat-btn zoom" rel="prettyphoto">
+					<span class="t" style="width: 140px;">
+								关注微信: 雄安群众
 							</span>
 					</span>
 							<span class="b" style="width: 140px;">
-								关注微信: 附都雄安
+								关注微信: 雄安群众
 							</span>
 
 				</a>

@@ -13,12 +13,42 @@ $data = get_fields();
 <div id="Content">
     <div class="content_wrapper clearfix">
         <div class="sections_group">
+            <?php
+            $items = new WP_Query([
+                'post_type' => 'projects_in_chinese',
+                'nopaging' => true
+            ]);
+            if(count($items->posts)>0){
+                ?>
+                <div class="fotorama" data-autoplay="true"
+                     data-arrows="true" data-loop="true" data-click="true"
+                     data-swipe="<?php echo $mobileDetector->isMobile()?'true':'false'; ?>"
+                    >
+                    <?php
+                    foreach ($items->posts as $thePost) {
+//                                            var_dump(get_field('is_in_home_page',$thePost->ID));
+//                                            var_dump(get_field('hd_image',$thePost->ID));
+//                                            var_dump($thePost);
+                        $sliderFile = get_field('hd_image',$thePost->ID);
+                        if(get_field('is_in_home_page',$thePost->ID)){
+                            ?>
+                            <div data-img="<?php echo $sliderFile['url']; ?>"  data-caption="<?php echo $thePost->post_title ?>">
+                                <a href="<?php echo get_permalink($thePost) ?>"></a>
+                            </div>
+                            <?php
+                        }
+                    }
+                    ?>
+                </div>
+                <br>
+                <?php
+            }
+
+            ?>
             <div class="entry-content">
                 <div class="section sections_style_4" style="margin-top: -40px;">
                     <div class="section_wrapper clearfix" <?php echo $mobileDetector->isMobile() ? 'style="width: 75% !important;"':null; ?>>
                         <div class="items_group clearfix">
-                            <!-- Page Title-->
-                            <!-- One full width row-->
                             <?php
                                 $jokesCategory = get_category_by_slug( 'jokes' );
                             ?>

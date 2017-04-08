@@ -421,3 +421,40 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
+
+// 添加 custom post type
+function my_custom_post_types() {
+	register_post_type('projects_in_chinese', array(
+		'label' => '头条新闻类型',
+		'description' => '头条新闻类型',
+		'public' => true,
+		'has_archive' => false,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'menu_position' => 6,
+		'menu_icon' => 'dashicons-video-alt',
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'rewrite' => array('slug' => 'projects_in_chinese'),
+		'query_var' => true,
+		'supports' => array('title', 'editor', 'thumbnail','excerpt'),
+		'taxonomies' => array('category','post_tag'),
+		'labels' => array(
+			'name' => 'Feature_News',
+			'singular_name' => '头条新闻',
+			'menu_name' => '头条',
+			'name_admin_bar' => '头条',
+			'all_items' => '全部头条',
+			'add_new' => '添加头条新闻',
+			'add_new_item' => '添加头条新闻',
+			'edit_item' => '编辑头条新闻',
+			'new_item' => '新头条',
+			'view_item' => '查看头条',
+			'search_items' => '搜索头条新闻',
+			'not_found' => '没发现头条新闻',
+			'not_found_in_trash' => '没发现头条新闻',
+			'parent_item_colon' => '头条新闻父级'
+		)
+	));
+}
+add_action('init', 'my_custom_post_types');

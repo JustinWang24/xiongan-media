@@ -52,7 +52,7 @@ $data = get_fields();
                                                     <a href="https://twitter.com/XionganNews" title="Twitter"><i class="icon-twitter"></i>雄安新闻@Twitter</a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="<?php echo get_template_directory_uri() ?>/images/qrcode_xiongan.jpg" title="关注微信: 雄安新闻@微信" style="color: #ff0000;" class="zoom" rel="prettyphoto">关注微信: 附都雄安</a>
+                                                    <a href="<?php echo get_template_directory_uri() ?>/images/34.pic.jpg" title="关注微信: 雄安群众" style="color: #ff0000;" class="zoom" rel="prettyphoto">关注微信: 雄安群众</a>
                                                 </li>
                                             </ul>
                                         </div>
